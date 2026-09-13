@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0C0D0E;
-  --foreground: #F5F3EE;
+  --background: #0c0d0e;
+  --foreground: #f5f3ee;
 }
 
 @theme inline {
@@ -12,16 +12,16 @@
   --font-serif: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
 
-  --color-studio-bg: #0C0D0E;
+  --color-studio-bg: #0c0d0e;
   --color-studio-surface: #151719;
-  --color-studio-surface-hover: #1C1F22;
+  --color-studio-surface-hover: #1c1f22;
   --color-studio-card: #151719;
-  --color-studio-gold: #C5A880;
-  --color-studio-gold-hover: #DFCCA8;
+  --color-studio-gold: #c5a880;
+  --color-studio-gold-hover: #dfcca8;
   --color-studio-gold-muted: rgba(197, 168, 128, 0.15);
-  --color-studio-text: #F5F3EE;
-  --color-studio-muted: #9E9A92;
-  --color-studio-border: #26292D;
+  --color-studio-text: #f5f3ee;
+  --color-studio-muted: #9e9a92;
+  --color-studio-border: #26292d;
 }
 
 html {
@@ -29,15 +29,24 @@ html {
   scroll-behavior: smooth;
 }
 
+@utility container {
+  margin-inline: auto;
+  max-width: 1720px;
+  padding-inline: 1rem;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-jakarta),
+    system-ui,
+    -apple-system,
+    sans-serif;
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #C5A880;
-  color: #0C0D0E;
+  background-color: #c5a880;
+  color: #0c0d0e;
 }
-
