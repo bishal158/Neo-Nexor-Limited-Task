@@ -41,8 +41,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${fraunces.variable} ${inter.variable} scroll-smooth`}
+      suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col bg-sand text-ink font-sans antialiased selection:bg-accent selection:text-white">
+      <body
+        className="min-h-screen flex flex-col bg-sand text-ink font-sans antialiased selection:bg-accent selection:text-white"
+        suppressHydrationWarning
+      >
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
