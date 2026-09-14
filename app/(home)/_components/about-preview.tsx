@@ -5,12 +5,12 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutPreview() {
   return (
-    <section className="py-20 md:py-28 bg-surface border-y border-line">
+    <section className="py-12 sm:py-16 md:py-24 bg-surface border-y border-line">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Architectural Image Pairing */}
           <div className="lg:col-span-5 order-2 lg:order-1 relative">
-            <div className="relative aspect-[3/4] rounded-[4px] overflow-hidden border border-line bg-sand">
+            <div className="relative aspect-[4/3] sm:aspect-[3/4] rounded-[4px] overflow-hidden border border-line bg-sand">
               <Image
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
                 alt="Architectural detailing by Neo Interior Studio"
@@ -36,11 +36,11 @@ export default function AboutPreview() {
               The Studio Philosophy
             </span>
 
-            <h2 className="font-display text-3xl sm:text-4xl text-ink font-normal leading-tight">
+            <h2 className="font-display text-xl sm:text-4xl text-ink font-normal leading-tight">
               An architectural practice committed to the quiet art of spatial harmony.
             </h2>
 
-            <div className="space-y-4 text-ink-muted text-base leading-relaxed max-w-[65ch]">
+            <div className="space-y-3 text-ink-muted text-sm leading-relaxed max-w-[65ch]">
               <p>
                 Founded by <strong>Neo Nexor Ltd</strong>, Neo Interior Studio operates at the intersection of architectural discipline and tactile interior design. We believe great spaces should not shout; they should envelop you in serene proportions and natural textures.
               </p>
@@ -49,7 +49,7 @@ export default function AboutPreview() {
               </p>
             </div>
 
-            <div className="pt-4 flex items-center gap-6">
+            <div className="pt-3 sm:pt-4 flex items-center gap-6">
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-deep transition-colors group"

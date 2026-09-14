@@ -10,9 +10,9 @@ export default function FeaturedProjects() {
   const featured = projects.filter((p) => p.featured).slice(0, 4);
 
   return (
-    <section className="py-20 md:py-28 bg-sand">
+    <section className="py-12 sm:py-16 md:py-24 bg-sand">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4 sm:gap-6">
           <SectionHeading
             eyebrow="Selected Portfolio"
             title="Curated spaces of quiet permanence."
@@ -31,7 +31,7 @@ export default function FeaturedProjects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
           {featured.map((project) => (
             <Link
               key={project.id}
@@ -39,7 +39,7 @@ export default function FeaturedProjects() {
               className="group block bg-surface rounded-[4px] border border-line overflow-hidden transition-all duration-300"
             >
               {/* Image Container with subtle hover zoom */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-sand">
+              <div className="relative aspect-[16/9] sm:aspect-[16/10] overflow-hidden bg-sand">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -55,10 +55,10 @@ export default function FeaturedProjects() {
               </div>
 
               {/* Card Meta & Caption */}
-              <div className="p-6 sm:p-7">
+              <div className="p-4 sm:p-6 lg:p-7">
                 <div className="flex items-start justify-between gap-4">
                   <div>
-                    <h3 className="font-display text-xl sm:text-2xl text-ink font-normal group-hover:text-accent transition-colors">
+                    <h3 className="font-display text-lg sm:text-2xl text-ink font-normal group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-xs text-ink-muted mt-1">

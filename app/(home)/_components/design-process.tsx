@@ -38,7 +38,7 @@ const PROCESS_STEPS = [
 
 export default function DesignProcess() {
   return (
-    <section className="py-20 md:py-28 bg-sand">
+    <section className="py-12 sm:py-16 md:py-24 bg-sand">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Our Methodology"
@@ -47,18 +47,18 @@ export default function DesignProcess() {
           align="left"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative">
           {PROCESS_STEPS.map((item) => (
             <div
               key={item.step}
-              className="bg-surface rounded-[4px] border border-line p-7 flex flex-col justify-between relative group hover:border-accent transition-colors"
+              className="bg-surface rounded-[4px] border border-line p-5 sm:p-7 flex flex-col justify-between relative group hover:border-accent transition-colors"
             >
               <div>
-                <span className="font-display text-3xl font-light text-accent/80 mb-4 block">
+                <span className="font-display text-2xl sm:text-3xl font-light text-accent/80 mb-3 sm:mb-4 block">
                   {item.step}
                 </span>
 
-                <h3 className="font-display text-lg text-ink font-normal mb-3">
+                <h3 className="font-display text-base sm:text-lg text-ink font-normal mb-2 sm:mb-3">
                   {item.title}
                 </h3>
 

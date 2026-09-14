@@ -21,13 +21,13 @@ export default function SectionHeading({
       : "text-left items-start";
 
   return (
-    <div className={`flex flex-col mb-10 md:mb-14 ${alignClasses} ${className}`}>
+    <div className={`flex flex-col mb-8 md:mb-12 ${alignClasses} ${className}`}>
       {eyebrow && (
         <span className="text-accent text-sm font-medium mb-2 tracking-normal">
           {eyebrow}
         </span>
       )}
-      <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-ink font-normal leading-[1.15] max-w-3xl">
+      <h2 className="font-display text-xl sm:text-3xl md:text-4xl text-ink font-normal leading-[1.15] max-w-3xl">
         {title}
       </h2>
       {description && (

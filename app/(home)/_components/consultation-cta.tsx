@@ -4,18 +4,18 @@ import Button from "@/components/ui/button";
 
 export default function ConsultationCTA() {
   return (
-    <section className="bg-accent-deep text-sand py-20 md:py-24 relative overflow-hidden">
+    <section className="bg-accent-deep text-sand py-12 sm:py-16 md:py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="inline-block text-xs uppercase tracking-widest text-highlight font-semibold">
             Begin Your Project
           </span>
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-sand font-light leading-tight">
+          <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl text-sand font-light leading-tight">
             Ready to shape an interior of quiet elegance?
           </h2>
 
-          <p className="text-sand/80 text-sm sm:text-base leading-relaxed max-w-[60ch] mx-auto">
+          <p className="text-sand/80 text-xs sm:text-base leading-relaxed max-w-[60ch] mx-auto">
             Whether you are acquiring a new residence, refurbishing an existing estate, or developing a flagship commercial space, our studio is ready to consult.
           </p>
 

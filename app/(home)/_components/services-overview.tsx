@@ -31,9 +31,9 @@ export default function ServicesOverview() {
   const displayServices = services.slice(0, 6);
 
   return (
-    <section className="py-20 md:py-28 bg-surface border-y border-line">
+    <section className="py-12 sm:py-16 md:py-24 bg-surface border-y border-line">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4 sm:gap-6">
           <SectionHeading
             eyebrow="Disciplines &amp; Expertise"
             title="Comprehensive architectural and interior capabilities."
@@ -52,11 +52,11 @@ export default function ServicesOverview() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {displayServices.map((service, index) => (
             <div
               key={service.id}
-              className="bg-sand rounded-[4px] border border-line p-7 flex flex-col justify-between hover:border-accent transition-colors duration-200"
+              className="bg-sand rounded-[4px] border border-line p-5 sm:p-7 flex flex-col justify-between hover:border-accent transition-colors duration-200"
             >
               <div>
                 <div className="w-10 h-10 rounded-[4px] bg-surface border border-line flex items-center justify-center mb-5">
