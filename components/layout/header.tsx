@@ -40,7 +40,7 @@ export default function Header() {
           : "bg-base/80 backdrop-blur-xs border-b border-line/60 py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="container px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link
           href="/"
@@ -115,7 +115,7 @@ export default function Header() {
 
       {/* Mobile Navigation Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[65px] bg-base/98 border-b border-line shadow-lg backdrop-blur-md px-6 py-8 animate-in slide-in-from-top-2 duration-200 z-40">
+        <div className="md:hidden fixed inset-x-0 top-16.25 bg-base/98 border-b border-line shadow-lg backdrop-blur-md px-6 py-8 animate-in slide-in-from-top-2 duration-200 z-40">
           <nav className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => {
               const isActive =

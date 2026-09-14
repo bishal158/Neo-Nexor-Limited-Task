@@ -37,7 +37,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
     <div
       id={service.id}
-      className="bg-surface rounded-[4px] border border-line overflow-hidden p-6 sm:p-8 lg:p-10 transition-colors"
+      className="bg-surface rounded-sm border border-line overflow-hidden p-6 sm:p-8 lg:p-10 transition-colors"
     >
       <div
         className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${

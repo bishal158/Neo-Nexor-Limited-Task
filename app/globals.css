@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  /* Default: Warm Limewash & Walnut (design.md) */
   --color-base: #f6f3ee;
   --color-surface: #ffffff;
   --color-ink: #221e1a;
@@ -9,6 +10,76 @@
   --color-accent-deep: #4e3b2a;
   --color-line: #e4ddd2;
   --color-highlight: #b08d57;
+
+  /* =========================================================================
+     ALTERNATIVE COLOR PALETTES (Uncomment any preset to apply across site)
+     ========================================================================= */
+
+  /* Variant 1: Japandi Harmony (Hinoki Cypress, Sand & Wabi-Sabi Clay)
+  --color-base: #f5f2eb;
+  --color-surface: #fbf9f5;
+  --color-ink: #26231e;
+  --color-ink-muted: #726c63;
+  --color-accent: #947a5b;
+  --color-accent-deep: #544432;
+  --color-line: #e5ded2;
+  --color-highlight: #c1a47e;
+  */
+
+  /* Variant 2: Terracotta & Raw Linen (Warm Mediterranean Earth)
+  --color-base: #f8f4ef;
+  --color-surface: #ffffff;
+  --color-ink: #2b1f1a;
+  --color-ink-muted: #78645c;
+  --color-accent: #b35d43;
+  --color-accent-deep: #6e3322;
+  --color-line: #e8ded6;
+  --color-highlight: #d9886a;
+  */
+
+  /* Variant 3: Biophilic Forest & Sage (Organic Botanical Sanctuary)
+  --color-base: #f2f5f1;
+  --color-surface: #ffffff;
+  --color-ink: #18231a;
+  --color-ink-muted: #566858;
+  --color-accent: #4a6750;
+  --color-accent-deep: #25392b;
+  --color-line: #d8e2d7;
+  --color-highlight: #7b9e83;
+  */
+
+  /* Variant 4: Nordic Minimalist (Chalk, Ash & Charcoal)
+  --color-base: #f4f4f3;
+  --color-surface: #ffffff;
+  --color-ink: #1c1d1f;
+  --color-ink-muted: #6e7178;
+  --color-accent: #5c626d;
+  --color-accent-deep: #2a2d34;
+  --color-line: #e2e3e5;
+  --color-highlight: #9aa0a6;
+  */
+
+  /* Variant 5: Moody Noir Atelier (Smoked Oak, Velvet & Brass Dark Mode)
+  --color-base: #111214;
+  --color-surface: #1a1c1e;
+  --color-ink: #f4f3ef;
+  --color-ink-muted: #9b9a95;
+  --color-accent: #c5a880;
+  --color-accent-deep: #1e1f23;
+  --color-line: #2d3035;
+  --color-highlight: #dfcca8;
+  */
+
+  /* Variant 6: Modern Travertine & Slate (Monolithic Architectural Stone)
+  --color-base: #f2eee8;
+  --color-surface: #faf7f2;
+  --color-ink: #1f2022;
+  --color-ink-muted: #67696f;
+  --color-accent: #6d5b4b;
+  --color-accent-deep: #3b3128;
+  --color-line: #dfd7cc;
+  --color-highlight: #a8947f;
+  */
 }
 
 @theme inline {
@@ -57,125 +128,8 @@ body {
   background: var(--color-accent);
 }
 
-/* ==========================================================================
-   Alternative Font Options & Color Schemes (Presets & Reference)
-   ==========================================================================
-
-  /* fonts * /
-  --font-primary: "Manrope", sans-serif;
-  --font-special: "Fira Code", monospace;
-
-  /* colors scheme * /
-  --color-primary: #ff00c8;
-  --color-shade-primary: rgba(255, 0, 200, 0.2);
-  --color-secondary: #00ffe7;
-  --color-site-background: #0d0d0d;
-  --color-text-primary: #f5f5f5;
-  --color-text-secondary: #777777;
-  --color-hover-link: #ff00c8;
-  --shadow-btn: 3px 3px 0 0 var(--color-primary);
-
-  /* custom breakpoints * /
-  --breakpoint-3xs: 375px; /* For small phones * /
-  --breakpoint-2xs: 390px; /* For medium phones * /
-  --breakpoint-xs: 480px;  /* For small tablets * /
-
-  /* Default breakpoints of Tailwind CSS:
-     sm: 640px
-     md: 768px
-     lg: 1024px
-     xl: 1280px
-     2xl: 1536px
-  * /
-
-  /* Font Presets:
-     // Font previous:
-     --font-primary: "Inter", sans-serif;
-     --font-special: "JetBrains Mono", monospace;
-
-     // Font 1:
-     --font-primary: "Manrope", sans-serif;
-     --font-special: "Fira Code", monospace;
-
-     // Font 2:
-     --font-primary: "Poppins", sans-serif;
-     --font-special: "IBM Plex Mono", monospace;
-
-     // Font 3:
-     --font-primary: "Figtree", sans-serif;
-     --font-special: "Source Code Pro", monospace;
-  * /
-
-  /* Color Scheme Presets:
-     // Previous scheme:
-     --color-primary: #ffd300;
-     --color-shade-primary: rgba(255, 211, 0, 0.2);
-     --color-secondary: #ff2e63;
-     --color-site-background: #121212;
-     --color-text-primary: #f1f1f1;
-     --color-text-secondary: #888888;
-     --color-hover-link: #ffd300;
-     --shadow-btn: 3px 3px 0 0 var(--color-primary);
-
-     // Scheme 1:
-     --color-primary: #00bcd4; 
-     --color-shade-primary: rgba(0, 188, 212, 0.2); 
-     --color-secondary: #ff4081;
-     --color-site-background: #0a0f1c; 
-     --color-text-primary: #e0f7fa; 
-     --color-text-secondary: #7f8fa6; 
-     --color-hover-link: #00e5ff; 
-     --shadow-btn: 3px 3px 0 0 var(--color-primary); 
-
-     // Scheme 2:
-     --color-primary: #ff00c8;       
-     --color-shade-primary: rgba(255, 0, 200, 0.2);
-     --color-secondary: #00ffe7; 
-     --color-site-background: #0d0d0d;
-     --color-text-primary: #f5f5f5;
-     --color-text-secondary: #777777;
-     --color-hover-link: #ff00c8;
-     --shadow-btn: 3px 3px 0 0 var(--color-primary);
-
-     // Scheme 3:
-     --color-primary: #ff6f61;        
-     --color-shade-primary: rgba(255, 111, 97, 0.2);
-     --color-secondary: #ffb74d; 
-     --color-site-background: #1e1a1a;
-     --color-text-primary: #fff3e0;
-     --color-text-secondary: #a1887f;
-     --color-hover-link: #ffb74d;
-     --shadow-btn: 3px 3px 0 0 var(--color-primary);
-
-     // Scheme 4:
-     --color-primary: #4caf50;      
-     --color-shade-primary: rgba(76, 175, 80, 0.2);
-     --color-secondary: #8d6e63;
-     --color-site-background: #121212;
-     --color-text-primary: #f1f8e9;
-     --color-text-secondary: #9e9e9e;
-     --color-hover-link: #aed581;
-     --shadow-btn: 3px 3px 0 0 var(--color-primary);
-
-     // Scheme 5:
-     --color-primary: #a78bfa;       
-     --color-shade-primary: rgba(167, 139, 250, 0.2);
-     --color-secondary: #7c3aed;
-     --color-site-background: #1f1b2e;
-     --color-text-primary: #f4f4f5;
-     --color-text-secondary: #aaa1c8;
-     --color-hover-link: #c4b5fd;
-     --shadow-btn: 3px 3px 0 0 var(--color-primary);
-
-     // Scheme 6:
-     --color-primary: #2196f3;        
-     --color-shade-primary: rgba(33, 150, 243, 0.2);
-     --color-secondary: #00acc1; 
-     --color-site-background: #0f1116;
-     --color-text-primary: #e3f2fd;
-     --color-text-secondary: #90a4ae;
-     --color-hover-link: #64b5f6;
-     --shadow-btn: 3px 3px 0 0 var(--color-primary);
-  * /
-========================================================================== */
-
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 1536px;
+}
