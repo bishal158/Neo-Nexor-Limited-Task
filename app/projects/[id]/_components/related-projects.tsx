@@ -23,13 +23,13 @@ export default function RelatedProjects({
   if (related.length === 0) return null;
 
   return (
-    <div className="pt-16 mt-16 border-t border-line space-y-8">
+    <div className="pt-8 sm:pt-16 mt-8 sm:mt-16 border-t border-line space-y-4 sm:space-y-8">
       <div className="flex items-center justify-between">
         <div>
           <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1">
             Continue Exploring
           </span>
-          <h2 className="font-display text-2xl text-ink font-normal">
+          <h2 className="font-display text-xl sm:text-2xl text-ink font-normal">
             Related Architectural Projects
           </h2>
         </div>
@@ -41,7 +41,7 @@ export default function RelatedProjects({
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-6">
         {related.map((item) => (
           <Link
             key={item.id}
@@ -56,16 +56,17 @@ export default function RelatedProjects({
                 className="object-cover transition-transform duration-500 ease-out group-hover:scale-104"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute top-3 left-3 bg-surface/90 px-2 py-0.5 rounded-[2px] text-[10px] font-medium text-accent uppercase">
+              <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 bg-surface/90 px-2 py-0.5 rounded-[2px] text-[10px] font-medium text-accent uppercase">
                 {item.category}
               </div>
             </div>
-            <div className="p-5">
-              <div className="flex items-start justify-between gap-2">
-                <h3 className="font-display text-base text-ink font-normal group-hover:text-accent transition-colors">
+
+            <div className="p-3 sm:p-5">
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="font-display text-base sm:text-lg text-ink font-normal group-hover:text-accent transition-colors">
                   {item.title}
                 </h3>
-                <ArrowUpRight className="w-4 h-4 text-ink-muted group-hover:text-accent shrink-0" />
+                <ArrowUpRight className="w-4 h-4 text-accent shrink-0" />
               </div>
               <p className="text-xs text-ink-muted mt-1">
                 {item.location} • {item.area}

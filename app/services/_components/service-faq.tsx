@@ -40,7 +40,7 @@ export default function ServiceFAQ() {
   };
 
   return (
-    <div className="py-12 max-w-4xl mx-auto">
+    <div className="py-6 sm:py-10 max-w-4xl mx-auto">
       <SectionHeading
         eyebrow="Frequently Asked Questions"
         title="Clarifying our engagement &amp; process."
@@ -48,7 +48,7 @@ export default function ServiceFAQ() {
         align="center"
       />
 
-      <div className="space-y-3 mt-8">
+      <div className="space-y-2 sm:space-y-3 mt-4 sm:mt-6">
         {FAQS.map((faq, index) => {
           const isOpen = openIndex === index;
 
@@ -60,23 +60,23 @@ export default function ServiceFAQ() {
               <button
                 type="button"
                 onClick={() => toggle(index)}
-                className="w-full text-left p-5 sm:p-6 flex items-center justify-between gap-4 cursor-pointer"
+                className="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 cursor-pointer"
                 aria-expanded={isOpen}
               >
-                <span className="font-display text-base sm:text-lg text-ink font-normal">
+                <span className="font-display text-sm sm:text-base text-ink font-normal">
                   {faq.question}
                 </span>
                 <span className="p-1 rounded-[3px] bg-sand text-accent shrink-0">
                   {isOpen ? (
-                    <Minus className="w-4 h-4" />
+                    <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   ) : (
-                    <Plus className="w-4 h-4" />
+                    <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   )}
                 </span>
               </button>
 
               {isOpen && (
-                <div className="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-ink-muted leading-relaxed border-t border-line/40">
+                <div className="px-3.5 sm:px-5 pb-3.5 sm:pb-5 pt-1 text-xs sm:text-sm text-ink-muted leading-relaxed border-t border-line/40">
                   {faq.answer}
                 </div>
               )}

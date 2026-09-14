@@ -2,28 +2,28 @@ import React from "react";
 
 export default function ServicesLoading() {
   return (
-    <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
+    <div className="py-3 sm:py-6 md:py-12 bg-sand min-h-screen animate-pulse">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Skeleton */}
-        <div className="max-w-3xl mb-14 space-y-3">
-          <div className="h-4 w-52 bg-line/60 rounded-[3px]" />
-          <div className="h-10 w-80 max-w-full bg-line/60 rounded-[4px]" />
-          <div className="h-4 w-full max-w-xl bg-line/40 rounded-[3px]" />
-          <div className="h-4 w-3/4 max-w-lg bg-line/40 rounded-[3px]" />
+        <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8 space-y-1.5 sm:space-y-3">
+          <div className="h-3.5 sm:h-4 w-52 bg-line/60 rounded-[3px]" />
+          <div className="h-7 sm:h-12 w-80 max-w-full bg-line/60 rounded-[4px]" />
+          <div className="h-4 sm:h-5 w-full max-w-xl bg-line/40 rounded-[3px]" />
+          <div className="h-4 sm:h-5 w-3/4 max-w-lg bg-line/40 rounded-[3px]" />
         </div>
 
         {/* Alternating Service Cards Skeleton */}
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 md:space-y-8">
           {[1, 2, 3].map((i) => {
             const isReversed = i % 2 === 0;
 
             return (
               <div
                 key={i}
-                className="bg-surface rounded-[4px] border border-line p-6 sm:p-8 lg:p-10"
+                className="bg-surface rounded-[4px] border border-line p-3.5 sm:p-7 lg:p-10"
               >
                 <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
+                  className={`grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 lg:gap-12 items-center ${
                     isReversed ? "lg:grid-flow-dense" : ""
                   }`}
                 >

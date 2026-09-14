@@ -30,20 +30,20 @@ const PHASES = [
 
 export default function ServiceProcess() {
   return (
-    <div className="py-16 md:py-20 bg-surface rounded-[4px] border border-line p-6 sm:p-10 my-16">
+    <div className="bg-surface rounded-[4px] border border-line p-3.5 sm:p-8 lg:p-10 my-6 sm:my-10 md:my-14">
       <SectionHeading
         eyebrow="Engagement Roadmap"
         title="Predictable milestones from concept to keys."
         description="We structure every interior commission into clearly defined deliverables and transparent approval stages."
         align="left"
-        className="mb-10"
+        className="mb-6 sm:mb-8"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
         {PHASES.map((item, idx) => (
           <div
             key={idx}
-            className="p-5 bg-sand rounded-[4px] border border-line flex flex-col justify-between"
+            className="p-3.5 sm:p-5 bg-sand rounded-[4px] border border-line flex flex-col justify-between"
           >
             <div>
               <span className="text-xs font-semibold text-accent uppercase tracking-wider block mb-2">

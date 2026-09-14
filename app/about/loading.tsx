@@ -2,35 +2,35 @@ import React from "react";
 
 export default function AboutLoading() {
     return (
-        <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
+        <div className="py-3 sm:py-6 md:py-12 bg-sand min-h-screen animate-pulse">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Skeleton */}
-                <div className="max-w-3xl mb-12 space-y-3">
-                    <div className="h-4 w-48 bg-line/60 rounded-[3px]" />
-                    <div className="h-10 w-80 max-w-full bg-line/60 rounded-[4px]" />
-                    <div className="h-4 w-full max-w-xl bg-line/40 rounded-[3px]" />
+                <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8 space-y-1.5 sm:space-y-3">
+                    <div className="h-3.5 sm:h-4 w-48 bg-line/60 rounded-[3px]" />
+                    <div className="h-7 sm:h-12 w-80 max-w-full bg-line/60 rounded-[4px]" />
+                    <div className="h-4 sm:h-5 w-full max-w-xl bg-line/40 rounded-[3px]" />
                 </div>
 
                 {/* Studio Story Split Skeleton */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-12">
-                    <div className="lg:col-span-6 space-y-4">
-                        <div className="h-4 w-36 bg-line/60 rounded-[3px]" />
-                        <div className="h-8 w-5/6 bg-line/60 rounded-[4px]" />
-                        <div className="space-y-2 pt-2">
-                            <div className="h-4 w-full bg-line/40 rounded-[3px]" />
-                            <div className="h-4 w-full bg-line/40 rounded-[3px]" />
-                            <div className="h-4 w-4/5 bg-line/40 rounded-[3px]" />
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-center py-6 sm:py-10">
+                    <div className="lg:col-span-6 space-y-3 sm:space-y-4">
+                        <div className="h-3.5 sm:h-4 w-36 bg-line/60 rounded-[3px]" />
+                        <div className="h-6 sm:h-8 w-5/6 bg-line/60 rounded-[4px]" />
+                        <div className="space-y-2 pt-1 sm:pt-2">
+                            <div className="h-3.5 sm:h-4 w-full bg-line/40 rounded-[3px]" />
+                            <div className="h-3.5 sm:h-4 w-full bg-line/40 rounded-[3px]" />
+                            <div className="h-3.5 sm:h-4 w-4/5 bg-line/40 rounded-[3px]" />
                         </div>
                     </div>
                     <div className="lg:col-span-6">
-                        <div className="aspect-[4/3] rounded-[4px] bg-surface border border-line" />
+                        <div className="aspect-[16/10] sm:aspect-[4/3] rounded-[4px] bg-surface border border-line" />
                     </div>
                 </div>
 
                 {/* Vision & Mission Skeleton */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 py-6 sm:py-10">
                     {[1, 2].map((i) => (
-                        <div key={i} className="p-8 bg-surface rounded-[4px] border border-line space-y-4">
+                        <div key={i} className="p-4 sm:p-7 md:p-8 bg-surface rounded-[4px] border border-line space-y-3 sm:space-y-4">
                             <div className="w-10 h-10 rounded-[4px] bg-sand border border-line" />
                             <div className="h-6 w-36 bg-line/60 rounded-[4px]" />
                             <div className="space-y-2">

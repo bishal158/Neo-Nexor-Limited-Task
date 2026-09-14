@@ -3,17 +3,17 @@ import Image from "next/image";
 
 export default function StudioStory() {
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-6 sm:py-10 md:py-14">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-6 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-16 items-center">
+          <div className="lg:col-span-6 space-y-3.5 sm:space-y-6">
             <span className="text-xs uppercase tracking-widest text-accent font-semibold block">
               Origins &amp; Purpose
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl text-ink font-normal leading-tight">
+            <h2 className="font-display text-xl sm:text-3xl md:text-4xl text-ink font-normal leading-tight">
               Crafting spatial calm in an era of sensory excess.
             </h2>
-            <div className="space-y-4 text-sm sm:text-base text-ink-muted leading-relaxed">
+            <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm md:text-base text-ink-muted leading-relaxed">
               <p>
                 Neo Interior Studio was established under <strong>Neo Nexor Ltd</strong> in Mohakhali DOHS, Dhaka, with a focused architectural objective: to replace disposable interior decorations with enduring, material-led physical spaces.
               </p>
@@ -27,7 +27,7 @@ export default function StudioStory() {
           </div>
 
           <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/3] rounded-[4px] overflow-hidden border border-line bg-surface">
+            <div className="relative aspect-[16/10] sm:aspect-[4/3] rounded-[4px] overflow-hidden border border-line bg-surface">
               <Image
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
                 alt="Neo Interior Studio design atelier"

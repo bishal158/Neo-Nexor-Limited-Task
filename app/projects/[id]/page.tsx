@@ -47,7 +47,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   }
 
   return (
-    <div className="py-3 sm:py-6 md:py-12 bg-sand min-h-screen">
+    <div className="py-8 md:py-12 bg-sand min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-6 sm:space-y-10">
           {/* Project Hero Header & Metadata */}

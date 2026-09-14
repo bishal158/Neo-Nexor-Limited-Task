@@ -8,27 +8,27 @@ interface ProjectSpecsProps {
 
 export default function ProjectSpecs({ project }: ProjectSpecsProps) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 pt-10 border-t border-line">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-14 pt-6 sm:pt-10 border-t border-line">
       {/* Narrative & Concept */}
-      <div className="lg:col-span-7 space-y-8">
+      <div className="lg:col-span-7 space-y-4 sm:space-y-8">
         <div>
-          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1 sm:mb-2">
             The Design Narrative
           </span>
-          <h2 className="font-display text-2xl text-ink font-normal mb-4">
+          <h2 className="font-display text-xl sm:text-2xl text-ink font-normal mb-2 sm:mb-4">
             Context &amp; Spatial Strategy
           </h2>
-          <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-ink-muted leading-relaxed">
             {project.description}
           </p>
         </div>
 
-        <div className="p-6 bg-surface rounded-[4px] border border-line">
-          <div className="flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-wider mb-2">
+        <div className="p-4 sm:p-6 bg-surface rounded-[4px] border border-line">
+          <div className="flex items-center gap-2 text-accent text-xs font-semibold uppercase tracking-wider mb-1.5 sm:mb-2">
             <Sparkles className="w-4 h-4" />
             <span>Design Concept</span>
           </div>
-          <p className="font-display text-base text-ink italic leading-relaxed">
+          <p className="font-display text-sm sm:text-base text-ink italic leading-relaxed">
             “{project.concept}”
           </p>
         </div>

@@ -14,17 +14,17 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="py-12 md:py-20 bg-sand min-h-screen">
+    <div className="py-8 md:py-12 bg-sand min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
-        <div className="max-w-3xl mb-12">
-          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+        <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8">
+          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1 sm:mb-2">
             The Studio Story &amp; Philosophy
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl text-ink font-normal leading-tight">
+          <h1 className="font-display text-2xl sm:text-5xl text-ink font-normal leading-tight">
             About Neo Interior Studio
           </h1>
-          <p className="mt-4 text-ink-muted text-base sm:text-lg leading-relaxed max-w-[65ch]">
+          <p className="mt-2.5 text-ink-muted text-sm sm:text-base leading-relaxed max-w-[65ch]">
             An architectural practice founded on the belief that spaces should be restful, tactile, and built to outlive fleeting aesthetic trends.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function AboutPage() {
       <TeamSection />
 
       {/* Consultation Banner */}
-      <div className="mt-16">
+      <div className="mt-8 sm:mt-12 md:mt-16">
         <ConsultationCTA />
       </div>
     </div>

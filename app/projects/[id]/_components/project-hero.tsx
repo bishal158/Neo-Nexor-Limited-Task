@@ -27,11 +27,11 @@ export default function ProjectHero({ project }: ProjectHeroProps) {
         <span className="text-xs text-ink-muted">Case Study #{project.id.slice(0, 8)}</span>
       </div>
 
-      <div className="space-y-1.5 sm:space-y-3">
-        <h1 className="font-display text-xl sm:text-3xl lg:text-5xl text-ink font-normal leading-tight">
+      <div className="space-y-2 sm:space-y-3">
+        <h1 className="font-display text-2xl sm:text-5xl text-ink font-normal leading-tight">
           {project.title}
         </h1>
-        <p className="text-[11px] sm:text-sm md:text-base text-ink-muted leading-relaxed max-w-[70ch]">
+        <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[70ch]">
           {project.subtitle}
         </p>
       </div>

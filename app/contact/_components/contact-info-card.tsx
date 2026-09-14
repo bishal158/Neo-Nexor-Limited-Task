@@ -3,21 +3,21 @@ import { MapPin, Phone, Mail, Clock, ShieldCheck } from "lucide-react";
 
 export default function ContactInfoCard() {
   return (
-    <div className="space-y-6">
-      <div className="bg-surface p-7 rounded-[4px] border border-line space-y-6">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="bg-surface p-4 sm:p-7 rounded-[4px] border border-line space-y-4 sm:space-y-6">
         <div>
           <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1">
             Official Studio Atelier
           </span>
-          <h2 className="font-display text-2xl text-ink font-normal">
+          <h2 className="font-display text-xl sm:text-2xl text-ink font-normal">
             Neo Nexor Ltd
           </h2>
-          <p className="text-xs text-ink-muted mt-1">
+          <p className="text-xs text-ink-muted mt-0.5 sm:mt-1">
             Interior Architecture &amp; Spatial Design Division
           </p>
         </div>
 
-        <div className="space-y-4 text-xs sm:text-sm text-ink-muted border-t border-line/60 pt-5">
+        <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-ink-muted border-t border-line/60 pt-4 sm:pt-5">
           <div className="flex items-start gap-3">
             <div className="p-2 rounded-[4px] bg-sand text-accent border border-line shrink-0 mt-0.5">
               <MapPin className="w-4 h-4" />

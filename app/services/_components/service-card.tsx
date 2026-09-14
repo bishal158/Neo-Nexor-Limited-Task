@@ -37,43 +37,43 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
   return (
     <div
       id={service.id}
-      className="bg-surface rounded-sm border border-line overflow-hidden p-6 sm:p-8 lg:p-10 transition-colors"
+      className="bg-surface rounded-sm border border-line overflow-hidden p-3.5 sm:p-7 lg:p-10 transition-colors"
     >
       <div
-        className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
+        className={`grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-8 lg:gap-12 items-center ${
           isReversed ? "lg:grid-flow-dense" : ""
         }`}
       >
         {/* Content Column */}
         <div
-          className={`lg:col-span-7 space-y-6 ${
+          className={`lg:col-span-7 space-y-3 sm:space-y-5 ${
             isReversed ? "lg:col-start-6" : ""
           }`}
         >
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-[4px] bg-sand border border-line flex items-center justify-center">
-              {iconMap[service.iconName] || <Home className="w-5 h-5 text-accent" />}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-[4px] bg-sand border border-line flex items-center justify-center shrink-0">
+              {iconMap[service.iconName] || <Home className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />}
             </div>
-            <span className="font-mono text-xs text-ink-muted">
+            <span className="font-mono text-[11px] sm:text-xs text-ink-muted">
               Service 0{index + 1}
             </span>
           </div>
 
           <div>
-            <h2 className="font-display text-2xl sm:text-3xl text-ink font-normal mb-3">
+            <h2 className="font-display text-lg sm:text-2xl md:text-3xl text-ink font-normal mb-1.5 sm:mb-3">
               {service.title}
             </h2>
-            <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
+            <p className="text-xs sm:text-sm md:text-base text-ink-muted leading-relaxed">
               {service.fullDescription}
             </p>
           </div>
 
           {/* Key Deliverables */}
-          <div className="space-y-3 pt-2">
-            <h4 className="text-xs uppercase tracking-wider text-accent font-semibold">
+          <div className="space-y-2 sm:space-y-3 pt-1">
+            <h4 className="text-[11px] sm:text-xs uppercase tracking-wider text-accent font-semibold">
               Deliverables &amp; Inclusions:
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2.5">
               {service.deliverables.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-2 text-xs text-ink-muted">
                   <span className="p-0.5 rounded-[2px] bg-sand text-accent border border-line mt-0.5 shrink-0">
@@ -86,13 +86,13 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
           </div>
 
           {/* Consultation Link */}
-          <div className="pt-2">
+          <div className="pt-1 sm:pt-2">
             <Link
               href={`/contact?service=${encodeURIComponent(service.title)}`}
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-accent hover:text-accent-deep transition-colors group"
+              className="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-medium text-accent hover:text-accent-deep transition-colors group"
             >
               <span>Consult on {service.title}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
             isReversed ? "lg:col-start-1" : ""
           }`}
         >
-          <div className="relative aspect-[4/3] rounded-[4px] overflow-hidden border border-line bg-sand">
+          <div className="relative aspect-[16/10] sm:aspect-[4/3] rounded-[4px] overflow-hidden border border-line bg-sand">
             <Image
               src={service.image}
               alt={service.title}

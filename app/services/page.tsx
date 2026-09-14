@@ -14,23 +14,23 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="py-12 md:py-20 bg-sand min-h-screen">
+    <div className="py-8 md:py-12 bg-sand min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Hero Header */}
-        <div className="max-w-3xl mb-14">
-          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+        <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8">
+          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1 sm:mb-2">
             Integrated Architectural &amp; Interior Services
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl text-ink font-normal leading-tight">
+          <h1 className="font-display text-2xl sm:text-5xl text-ink font-normal leading-tight">
             Our Design Capabilities
           </h1>
-          <p className="mt-4 text-ink-muted text-base sm:text-lg leading-relaxed max-w-[65ch]">
+          <p className="mt-2.5 text-ink-muted text-sm sm:text-base leading-relaxed max-w-[65ch]">
             From concept sketches and spatial diagnosis to turnkey fabrication and white-glove site delivery, we offer an end-to-end architectural interior practice.
           </p>
         </div>
 
         {/* 8 Core Services Cards */}
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 md:space-y-8">
           {services.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
@@ -44,7 +44,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Consultation Banner */}
-      <div className="mt-16">
+      <div className="mt-8 sm:mt-12 md:mt-16">
         <ConsultationCTA />
       </div>
     </div>

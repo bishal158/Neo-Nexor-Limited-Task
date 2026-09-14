@@ -12,23 +12,23 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="py-12 md:py-20 bg-sand min-h-screen">
+    <div className="py-8 md:py-12 bg-sand min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mb-12">
-          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+        <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8">
+          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1 sm:mb-2">
             Direct Atelier Engagement
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl text-ink font-normal leading-tight">
+          <h1 className="font-display text-2xl sm:text-5xl text-ink font-normal leading-tight">
             Schedule a Design Consultation
           </h1>
-          <p className="mt-4 text-ink-muted text-base sm:text-lg leading-relaxed max-w-[65ch]">
+          <p className="mt-2.5 text-ink-muted text-sm sm:text-base leading-relaxed max-w-[65ch]">
             Connect directly with our principal architects to evaluate your property, review spatial layouts, or commission a complete turnkey renovation.
           </p>
         </div>
 
         {/* Contact Info & Form Columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start mb-8 sm:mb-12 md:mb-16">
           <div className="lg:col-span-5 order-2 lg:order-1">
             <ContactInfoCard />
           </div>

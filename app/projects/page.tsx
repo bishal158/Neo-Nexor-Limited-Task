@@ -47,7 +47,7 @@ function ProjectsContent() {
   }, [activeCategory]);
 
   return (
-    <div className="py-3 sm:py-6 md:py-12 bg-sand min-h-screen">
+    <div className="py-8 md:py-12 bg-sand min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8">

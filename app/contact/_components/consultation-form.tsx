@@ -125,9 +125,9 @@ export default function ConsultationForm() {
 
   /* ---- Form ------------------------------------------------------------- */
   return (
-    <div className="bg-surface rounded-[4px] border border-line p-6 sm:p-8 lg:p-10">
-      <div className="mb-6 space-y-1">
-        <h3 className="font-display text-2xl text-ink font-normal">
+    <div className="bg-surface rounded-[4px] border border-line p-4 sm:p-8 lg:p-10">
+      <div className="mb-4 sm:mb-6 space-y-1">
+        <h3 className="font-display text-xl sm:text-2xl text-ink font-normal">
           Request a Design Consultation
         </h3>
         <p className="text-xs sm:text-sm text-ink-muted">
@@ -136,9 +136,9 @@ export default function ConsultationForm() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-3.5 sm:space-y-5">
         {/* Row 1 — Name + Phone */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-5">
           <CommonFieldset
             label="Full Name"
             required

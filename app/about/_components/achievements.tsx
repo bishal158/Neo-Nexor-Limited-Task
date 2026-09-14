@@ -31,7 +31,7 @@ export default function Achievements() {
   ];
 
   return (
-    <section className="py-20 bg-sand">
+    <section className="py-8 sm:py-12 md:py-16 bg-sand">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Milestones &amp; Impact"
@@ -40,20 +40,20 @@ export default function Achievements() {
           align="left"
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6">
           {stats.map((stat, idx) => (
             <div
               key={idx}
-              className="p-7 bg-surface rounded-[4px] border border-line flex flex-col justify-between hover:border-accent transition-colors"
+              className="p-4 sm:p-6 md:p-7 bg-surface rounded-[4px] border border-line flex flex-col justify-between hover:border-accent transition-colors"
             >
               <div>
-                <div className="w-10 h-10 rounded-[4px] bg-sand border border-line flex items-center justify-center mb-4">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-[4px] bg-sand border border-line flex items-center justify-center mb-3 sm:mb-4">
                   {stat.icon}
                 </div>
-                <span className="font-display text-3xl sm:text-4xl text-ink font-light block mb-1">
+                <span className="font-display text-lg sm:text-3xl text-ink font-normal block mb-1">
                   {stat.value}
                 </span>
-                <p className="text-sm font-medium text-ink mb-2">{stat.label}</p>
+                <p className="text-xs sm:text-sm font-medium text-ink mb-1 sm:mb-2">{stat.label}</p>
                 <p className="text-xs text-ink-muted leading-relaxed">
                   {stat.desc}
                 </p>
