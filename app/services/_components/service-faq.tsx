@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionHeading from "@/components/ui/section-heading";
 
 const FAQS = [
@@ -60,13 +61,13 @@ export default function ServiceFAQ() {
               <button
                 type="button"
                 onClick={() => toggle(index)}
-                className="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 cursor-pointer"
+                className="w-full text-left p-3.5 sm:p-5 flex items-center justify-between gap-3 cursor-pointer select-none"
                 aria-expanded={isOpen}
               >
                 <span className="font-display text-sm sm:text-base text-ink font-normal">
                   {faq.question}
                 </span>
-                <span className="p-1 rounded-[3px] bg-sand text-accent shrink-0">
+                <span className="p-1 rounded-[3px] bg-sand text-accent shrink-0 flex items-center justify-center transition-colors">
                   {isOpen ? (
                     <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   ) : (
@@ -75,11 +76,22 @@ export default function ServiceFAQ() {
                 </span>
               </button>
 
-              {isOpen && (
-                <div className="px-3.5 sm:px-5 pb-3.5 sm:pb-5 pt-1 text-xs sm:text-sm text-ink-muted leading-relaxed border-t border-line/40">
-                  {faq.answer}
-                </div>
-              )}
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="overflow-hidden border-t border-line/40"
+                  >
+                    <div className="px-3.5 sm:px-5 pb-3.5 sm:pb-5 pt-2 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           );
         })}
