@@ -1,22 +1,35 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Neo Interior Studio | Modern Architecture & Luxury Interior Design",
-  description: "Curated interior architecture, residential, commercial spaces and bespoke luxury interior design by Neo Interior Studio.",
+  description:
+    "Tactile, material-led interior architecture, residential sanctuaries, and commercial spaces by Neo Interior Studio (Neo Nexor Ltd). Located in Mohakhali DOHS, Dhaka.",
+  keywords: [
+    "Interior Design Dhaka",
+    "Neo Interior Studio",
+    "Architecture Bangladesh",
+    "Residential Interior",
+    "Commercial Interior",
+    "Luxury Interiors Mohakhali DOHS",
+  ],
 };
 
 export default function RootLayout({
@@ -27,10 +40,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${jakarta.variable} dark antialiased`}
+      className={`${fraunces.variable} ${inter.variable} scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col bg-studio-bg text-studio-text">
-        {children}
+      <body className="min-h-screen flex flex-col bg-base text-ink font-sans antialiased selection:bg-accent selection:text-white">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

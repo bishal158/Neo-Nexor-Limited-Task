@@ -1,52 +1,181 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0c0d0e;
-  --foreground: #f5f3ee;
+  --color-base: #f6f3ee;
+  --color-surface: #ffffff;
+  --color-ink: #221e1a;
+  --color-ink-muted: #6b6259;
+  --color-accent: #8a6a4b;
+  --color-accent-deep: #4e3b2a;
+  --color-line: #e4ddd2;
+  --color-highlight: #b08d57;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-base: var(--color-base);
+  --color-surface: var(--color-surface);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-deep: var(--color-accent-deep);
+  --color-line: var(--color-line);
+  --color-highlight: var(--color-highlight);
 
-  --font-serif: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
-
-  --color-studio-bg: #0c0d0e;
-  --color-studio-surface: #151719;
-  --color-studio-surface-hover: #1c1f22;
-  --color-studio-card: #151719;
-  --color-studio-gold: #c5a880;
-  --color-studio-gold-hover: #dfcca8;
-  --color-studio-gold-muted: rgba(197, 168, 128, 0.15);
-  --color-studio-text: #f5f3ee;
-  --color-studio-muted: #9e9a92;
-  --color-studio-border: #26292d;
+  --font-display: var(--font-fraunces), "Fraunces", Georgia, serif;
+  --font-sans: var(--font-inter), "Inter", system-ui, -apple-system, sans-serif;
 }
 
 html {
-  color-scheme: dark;
   scroll-behavior: smooth;
 }
 
-@utility container {
-  margin-inline: auto;
-  max-width: 1720px;
-  padding-inline: 1rem;
-}
-
 body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family:
-    var(--font-jakarta),
-    system-ui,
-    -apple-system,
-    sans-serif;
+  background-color: var(--color-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
 ::selection {
-  background-color: #c5a880;
-  color: #0c0d0e;
+  background-color: var(--color-accent);
+  color: #ffffff;
 }
+
+/* Subtle architectural scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ==========================================================================
+   Alternative Font Options & Color Schemes (Presets & Reference)
+   ==========================================================================
+
+  /* fonts * /
+  --font-primary: "Manrope", sans-serif;
+  --font-special: "Fira Code", monospace;
+
+  /* colors scheme * /
+  --color-primary: #ff00c8;
+  --color-shade-primary: rgba(255, 0, 200, 0.2);
+  --color-secondary: #00ffe7;
+  --color-site-background: #0d0d0d;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #777777;
+  --color-hover-link: #ff00c8;
+  --shadow-btn: 3px 3px 0 0 var(--color-primary);
+
+  /* custom breakpoints * /
+  --breakpoint-3xs: 375px; /* For small phones * /
+  --breakpoint-2xs: 390px; /* For medium phones * /
+  --breakpoint-xs: 480px;  /* For small tablets * /
+
+  /* Default breakpoints of Tailwind CSS:
+     sm: 640px
+     md: 768px
+     lg: 1024px
+     xl: 1280px
+     2xl: 1536px
+  * /
+
+  /* Font Presets:
+     // Font previous:
+     --font-primary: "Inter", sans-serif;
+     --font-special: "JetBrains Mono", monospace;
+
+     // Font 1:
+     --font-primary: "Manrope", sans-serif;
+     --font-special: "Fira Code", monospace;
+
+     // Font 2:
+     --font-primary: "Poppins", sans-serif;
+     --font-special: "IBM Plex Mono", monospace;
+
+     // Font 3:
+     --font-primary: "Figtree", sans-serif;
+     --font-special: "Source Code Pro", monospace;
+  * /
+
+  /* Color Scheme Presets:
+     // Previous scheme:
+     --color-primary: #ffd300;
+     --color-shade-primary: rgba(255, 211, 0, 0.2);
+     --color-secondary: #ff2e63;
+     --color-site-background: #121212;
+     --color-text-primary: #f1f1f1;
+     --color-text-secondary: #888888;
+     --color-hover-link: #ffd300;
+     --shadow-btn: 3px 3px 0 0 var(--color-primary);
+
+     // Scheme 1:
+     --color-primary: #00bcd4; 
+     --color-shade-primary: rgba(0, 188, 212, 0.2); 
+     --color-secondary: #ff4081;
+     --color-site-background: #0a0f1c; 
+     --color-text-primary: #e0f7fa; 
+     --color-text-secondary: #7f8fa6; 
+     --color-hover-link: #00e5ff; 
+     --shadow-btn: 3px 3px 0 0 var(--color-primary); 
+
+     // Scheme 2:
+     --color-primary: #ff00c8;       
+     --color-shade-primary: rgba(255, 0, 200, 0.2);
+     --color-secondary: #00ffe7; 
+     --color-site-background: #0d0d0d;
+     --color-text-primary: #f5f5f5;
+     --color-text-secondary: #777777;
+     --color-hover-link: #ff00c8;
+     --shadow-btn: 3px 3px 0 0 var(--color-primary);
+
+     // Scheme 3:
+     --color-primary: #ff6f61;        
+     --color-shade-primary: rgba(255, 111, 97, 0.2);
+     --color-secondary: #ffb74d; 
+     --color-site-background: #1e1a1a;
+     --color-text-primary: #fff3e0;
+     --color-text-secondary: #a1887f;
+     --color-hover-link: #ffb74d;
+     --shadow-btn: 3px 3px 0 0 var(--color-primary);
+
+     // Scheme 4:
+     --color-primary: #4caf50;      
+     --color-shade-primary: rgba(76, 175, 80, 0.2);
+     --color-secondary: #8d6e63;
+     --color-site-background: #121212;
+     --color-text-primary: #f1f8e9;
+     --color-text-secondary: #9e9e9e;
+     --color-hover-link: #aed581;
+     --shadow-btn: 3px 3px 0 0 var(--color-primary);
+
+     // Scheme 5:
+     --color-primary: #a78bfa;       
+     --color-shade-primary: rgba(167, 139, 250, 0.2);
+     --color-secondary: #7c3aed;
+     --color-site-background: #1f1b2e;
+     --color-text-primary: #f4f4f5;
+     --color-text-secondary: #aaa1c8;
+     --color-hover-link: #c4b5fd;
+     --shadow-btn: 3px 3px 0 0 var(--color-primary);
+
+     // Scheme 6:
+     --color-primary: #2196f3;        
+     --color-shade-primary: rgba(33, 150, 243, 0.2);
+     --color-secondary: #00acc1; 
+     --color-site-background: #0f1116;
+     --color-text-primary: #e3f2fd;
+     --color-text-secondary: #90a4ae;
+     --color-hover-link: #64b5f6;
+     --shadow-btn: 3px 3px 0 0 var(--color-primary);
+  * /
+========================================================================== */
+

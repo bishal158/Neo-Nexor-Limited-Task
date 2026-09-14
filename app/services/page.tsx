@@ -1,9 +1,53 @@
 import React from "react";
+import type { Metadata } from "next";
+import Container from "@/components/ui/container";
+import ServiceCard from "./_components/service-card";
+import ServiceProcess from "./_components/service-process";
+import ServiceFAQ from "./_components/service-faq";
+import ConsultationCTA from "../(home)/_components/consultation-cta";
+import { services } from "@/data/services";
+
+export const metadata: Metadata = {
+  title: "Interior Design Services | Neo Interior Studio",
+  description:
+    "Explore our 8 core disciplines: residential interior design, commercial & office spaces, space planning, 3D visualization, furniture selection, and turnkey renovations.",
+};
 
 export default function ServicesPage() {
   return (
-    <main>
-      <h1>Our Services</h1>
-    </main>
+    <div className="py-12 md:py-20 bg-base min-h-screen">
+      <Container>
+        {/* Page Hero Header */}
+        <div className="max-w-3xl mb-14">
+          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+            Integrated Architectural &amp; Interior Services
+          </span>
+          <h1 className="font-display text-4xl sm:text-5xl text-ink font-normal leading-tight">
+            Our Design Capabilities
+          </h1>
+          <p className="mt-4 text-ink-muted text-base sm:text-lg leading-relaxed max-w-[65ch]">
+            From concept sketches and spatial diagnosis to turnkey fabrication and white-glove site delivery, we offer an end-to-end architectural interior practice.
+          </p>
+        </div>
+
+        {/* 8 Core Services Cards */}
+        <div className="space-y-8">
+          {services.map((service, index) => (
+            <ServiceCard key={service.id} service={service} index={index} />
+          ))}
+        </div>
+
+        {/* Engagement Methodology */}
+        <ServiceProcess />
+
+        {/* FAQ Accordion */}
+        <ServiceFAQ />
+      </Container>
+
+      {/* Consultation Banner */}
+      <div className="mt-16">
+        <ConsultationCTA />
+      </div>
+    </div>
   );
 }
