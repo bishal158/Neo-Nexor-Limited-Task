@@ -31,7 +31,7 @@ export default function Achievements() {
   ];
 
   return (
-    <section className="py-20 bg-base">
+    <section className="py-20 bg-sand">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Milestones &amp; Impact"
@@ -47,7 +47,7 @@ export default function Achievements() {
               className="p-7 bg-surface rounded-[4px] border border-line flex flex-col justify-between hover:border-accent transition-colors"
             >
               <div>
-                <div className="w-10 h-10 rounded-[4px] bg-base border border-line flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-[4px] bg-sand border border-line flex items-center justify-center mb-4">
                   {stat.icon}
                 </div>
                 <span className="font-display text-3xl sm:text-4xl text-ink font-light block mb-1">

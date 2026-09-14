@@ -97,7 +97,7 @@ export default function ConsultationForm() {
           </p>
         </div>
 
-        <div className="p-4 bg-base rounded-[4px] border border-line text-xs text-ink-muted max-w-sm mx-auto">
+        <div className="p-4 bg-sand rounded-[4px] border border-line text-xs text-ink-muted max-w-sm mx-auto">
           <p>Direct Studio Phone: +880 1627 277284</p>
           <p className="mt-1">Email: md@neonexor.com</p>
         </div>
@@ -135,7 +135,7 @@ export default function ConsultationForm() {
               placeholder="e.g. Tariqul Islam"
               value={formData.name}
               onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-base border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
+              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
             />
           </div>
 
@@ -152,7 +152,7 @@ export default function ConsultationForm() {
               placeholder="e.g. +880 1711 XXXXXX"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-base border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
+              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
             />
           </div>
         </div>
@@ -171,7 +171,7 @@ export default function ConsultationForm() {
               placeholder="e.g. client@domain.com"
               value={formData.email}
               onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-base border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
+              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
             />
           </div>
 
@@ -187,7 +187,7 @@ export default function ConsultationForm() {
               placeholder="e.g. 4,200 sq ft, Gulshan 2"
               value={formData.approxArea}
               onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-base border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
+              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
             />
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function ConsultationForm() {
             name="projectType"
             value={formData.projectType}
             onChange={handleChange}
-            className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-base border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink transition-colors cursor-pointer"
+            className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink transition-colors cursor-pointer"
           >
             {PROJECT_TYPES.map((type) => (
               <option key={type} value={type}>
@@ -225,7 +225,7 @@ export default function ConsultationForm() {
             placeholder="Tell us about the property, your anticipated timeline, preferred materials, and spatial aspirations..."
             value={formData.message}
             onChange={handleChange}
-            className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-base border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors resize-y"
+            className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors resize-y"
           />
         </div>
 

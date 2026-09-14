@@ -19,7 +19,7 @@ export default function ContactInfoCard() {
 
         <div className="space-y-4 text-xs sm:text-sm text-ink-muted border-t border-line/60 pt-5">
           <div className="flex items-start gap-3">
-            <div className="p-2 rounded-[4px] bg-base text-accent border border-line shrink-0 mt-0.5">
+            <div className="p-2 rounded-[4px] bg-sand text-accent border border-line shrink-0 mt-0.5">
               <MapPin className="w-4 h-4" />
             </div>
             <div>
@@ -31,7 +31,7 @@ export default function ContactInfoCard() {
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="p-2 rounded-[4px] bg-base text-accent border border-line shrink-0 mt-0.5">
+            <div className="p-2 rounded-[4px] bg-sand text-accent border border-line shrink-0 mt-0.5">
               <Phone className="w-4 h-4" />
             </div>
             <div>
@@ -46,7 +46,7 @@ export default function ContactInfoCard() {
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="p-2 rounded-[4px] bg-base text-accent border border-line shrink-0 mt-0.5">
+            <div className="p-2 rounded-[4px] bg-sand text-accent border border-line shrink-0 mt-0.5">
               <Mail className="w-4 h-4" />
             </div>
             <div>
@@ -61,7 +61,7 @@ export default function ContactInfoCard() {
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="p-2 rounded-[4px] bg-base text-accent border border-line shrink-0 mt-0.5">
+            <div className="p-2 rounded-[4px] bg-sand text-accent border border-line shrink-0 mt-0.5">
               <Clock className="w-4 h-4" />
             </div>
             <div>
@@ -73,7 +73,7 @@ export default function ContactInfoCard() {
         </div>
       </div>
 
-      <div className="p-5 bg-base rounded-[4px] border border-line flex items-center gap-3">
+      <div className="p-5 bg-sand rounded-[4px] border border-line flex items-center gap-3">
         <ShieldCheck className="w-5 h-5 text-accent shrink-0" />
         <p className="text-xs text-ink-muted">
           All client consultations include a preliminary 30-minute spatial diagnostic review at no obligation.

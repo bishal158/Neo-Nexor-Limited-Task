@@ -56,7 +56,7 @@ export default function ServicesOverview() {
           {displayServices.map((service, index) => (
             <div
               key={service.id}
-              className="bg-base rounded-[4px] border border-line p-7 flex flex-col justify-between hover:border-accent transition-colors duration-200"
+              className="bg-sand rounded-[4px] border border-line p-7 flex flex-col justify-between hover:border-accent transition-colors duration-200"
             >
               <div>
                 <div className="w-10 h-10 rounded-[4px] bg-surface border border-line flex items-center justify-center mb-5">

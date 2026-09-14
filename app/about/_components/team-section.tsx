@@ -18,7 +18,7 @@ export default function TeamSection() {
           {teamMembers.map((member) => (
             <div
               key={member.name}
-              className="bg-base rounded-[4px] border border-line overflow-hidden flex flex-col justify-between group hover:border-accent transition-colors"
+              className="bg-sand rounded-[4px] border border-line overflow-hidden flex flex-col justify-between group hover:border-accent transition-colors"
             >
               <div>
                 <div className="relative aspect-[3/4] overflow-hidden bg-surface">

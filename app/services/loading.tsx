@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ServicesLoading() {
   return (
-    <div className="py-12 md:py-20 bg-base min-h-screen animate-pulse">
+    <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Skeleton */}
         <div className="max-w-3xl mb-14 space-y-3">
@@ -33,7 +33,7 @@ export default function ServicesLoading() {
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-[4px] bg-base border border-line" />
+                      <div className="w-10 h-10 rounded-[4px] bg-sand border border-line" />
                       <div className="h-3 w-20 bg-line/40 rounded-[2px]" />
                     </div>
 
@@ -57,7 +57,7 @@ export default function ServicesLoading() {
                       isReversed ? "lg:col-start-1" : ""
                     }`}
                   >
-                    <div className="aspect-[4/3] rounded-[4px] bg-base border border-line" />
+                    <div className="aspect-[4/3] rounded-[4px] bg-sand border border-line" />
                   </div>
                 </div>
               </div>

@@ -43,7 +43,7 @@ export default function ServiceProcess() {
         {PHASES.map((item, idx) => (
           <div
             key={idx}
-            className="p-5 bg-base rounded-[4px] border border-line flex flex-col justify-between"
+            className="p-5 bg-sand rounded-[4px] border border-line flex flex-col justify-between"
           >
             <div>
               <span className="text-xs font-semibold text-accent uppercase tracking-wider block mb-2">

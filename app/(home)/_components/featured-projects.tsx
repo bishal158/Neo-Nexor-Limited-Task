@@ -10,7 +10,7 @@ export default function FeaturedProjects() {
   const featured = projects.filter((p) => p.featured).slice(0, 4);
 
   return (
-    <section className="py-20 md:py-28 bg-base">
+    <section className="py-20 md:py-28 bg-sand">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <SectionHeading
@@ -39,7 +39,7 @@ export default function FeaturedProjects() {
               className="group block bg-surface rounded-[4px] border border-line overflow-hidden transition-all duration-300"
             >
               {/* Image Container with subtle hover zoom */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-base">
+              <div className="relative aspect-[16/10] overflow-hidden bg-sand">
                 <Image
                   src={project.image}
                   alt={project.title}

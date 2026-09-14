@@ -66,7 +66,7 @@ export default function ServiceFAQ() {
                 <span className="font-display text-base sm:text-lg text-ink font-normal">
                   {faq.question}
                 </span>
-                <span className="p-1 rounded-[3px] bg-base text-accent shrink-0">
+                <span className="p-1 rounded-[3px] bg-sand text-accent shrink-0">
                   {isOpen ? (
                     <Minus className="w-4 h-4" />
                   ) : (

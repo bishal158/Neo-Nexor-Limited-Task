@@ -165,7 +165,7 @@ export default function Footer() {
                 Receive our curated journal on spatial aesthetics and materials.
               </p>
               {subscribed ? (
-                <div className="flex items-center gap-2 text-xs text-accent bg-base p-2.5 rounded-[4px] border border-line">
+                <div className="flex items-center gap-2 text-xs text-accent bg-sand p-2.5 rounded-[4px] border border-line">
                   <Check className="w-4 h-4" />
                   <span>Thank you for subscribing.</span>
                 </div>
@@ -177,7 +177,7 @@ export default function Footer() {
                     placeholder="Your email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full text-xs px-3 py-2 bg-base border border-line rounded-l-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted"
+                    className="w-full text-xs px-3 py-2 bg-sand border border-line rounded-l-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted"
                   />
                   <button
                     type="submit"

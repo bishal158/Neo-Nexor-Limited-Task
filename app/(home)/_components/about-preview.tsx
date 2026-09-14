@@ -10,7 +10,7 @@ export default function AboutPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Architectural Image Pairing */}
           <div className="lg:col-span-5 order-2 lg:order-1 relative">
-            <div className="relative aspect-[3/4] rounded-[4px] overflow-hidden border border-line bg-base">
+            <div className="relative aspect-[3/4] rounded-[4px] overflow-hidden border border-line bg-sand">
               <Image
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80"
                 alt="Architectural detailing by Neo Interior Studio"
@@ -20,7 +20,7 @@ export default function AboutPreview() {
               />
             </div>
             {/* Small floating architectural quote card */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 p-5 bg-base border border-line rounded-[4px] max-w-xs shadow-xs">
+            <div className="hidden sm:block absolute -bottom-6 -right-6 p-5 bg-sand border border-line rounded-[4px] max-w-xs shadow-xs">
               <p className="font-display text-sm text-ink italic leading-snug">
                 “Simplicity is not the lack of clutter; it is the presence of purpose.”
               </p>

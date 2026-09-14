@@ -38,7 +38,7 @@ const PROCESS_STEPS = [
 
 export default function DesignProcess() {
   return (
-    <section className="py-20 md:py-28 bg-base">
+    <section className="py-20 md:py-28 bg-sand">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Our Methodology"

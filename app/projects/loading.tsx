@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectsLoading() {
     return (
-        <div className="py-12 md:py-20 bg-base min-h-screen animate-pulse">
+        <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Skeleton */}
                 <div className="max-w-3xl mb-10 space-y-3">

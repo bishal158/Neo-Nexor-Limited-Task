@@ -44,7 +44,7 @@ export default function ProjectSpecs({ project }: ProjectSpecsProps) {
           <ul className="space-y-2.5">
             {project.scope.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2.5 text-xs text-ink-muted">
-                <span className="p-0.5 rounded-[2px] bg-base text-accent border border-line mt-0.5 shrink-0">
+                <span className="p-0.5 rounded-[2px] bg-sand text-accent border border-line mt-0.5 shrink-0">
                   <Check className="w-3 h-3" />
                 </span>
                 <span>{item}</span>
@@ -62,7 +62,7 @@ export default function ProjectSpecs({ project }: ProjectSpecsProps) {
             {project.materials.map((mat, idx) => (
               <span
                 key={idx}
-                className="text-xs px-3 py-1.5 rounded-[3px] bg-base text-ink border border-line font-medium"
+                className="text-xs px-3 py-1.5 rounded-[3px] bg-sand text-ink border border-line font-medium"
               >
                 {mat}
               </span>

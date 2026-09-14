@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectDetailLoading() {
     return (
-        <div className="py-12 md:py-20 bg-base min-h-screen animate-pulse">
+        <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="space-y-12">
                     {/* Hero Header Skeleton */}

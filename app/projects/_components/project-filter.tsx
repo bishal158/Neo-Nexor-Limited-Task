@@ -36,7 +36,7 @@ export default function ProjectFilter({
             <span>{cat}</span>
             <span
               className={`text-[10px] px-1.5 py-0.2 rounded-[2px] ${
-                isActive ? "bg-surface/20 text-surface" : "bg-base text-ink-muted"
+                isActive ? "bg-surface/20 text-surface" : "bg-sand text-ink-muted"
               }`}
             >
               {count}

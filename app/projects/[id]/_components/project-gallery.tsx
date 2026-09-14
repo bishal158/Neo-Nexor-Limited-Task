@@ -53,12 +53,12 @@ export default function ProjectGallery({ gallery, title }: ProjectGalleryProps) 
             index === 0
               ? "lg:col-span-8 aspect-[16/10]"
               : index === 1
-              ? "lg:col-span-4 aspect-[4/5]"
-              : index === 2
-              ? "lg:col-span-4 aspect-[4/5]"
-              : index === 3
-              ? "lg:col-span-4 aspect-[4/5]"
-              : "lg:col-span-4 aspect-[4/5]";
+                ? "lg:col-span-4 aspect-[4/5]"
+                : index === 2
+                  ? "lg:col-span-4 aspect-[4/5]"
+                  : index === 3
+                    ? "lg:col-span-4 aspect-[4/5]"
+                    : "lg:col-span-4 aspect-[4/5]";
 
           return (
             <button
@@ -126,7 +126,7 @@ export default function ProjectGallery({ gallery, title }: ProjectGalleryProps) 
                 priority
               />
             </div>
-            <div className="mt-3 text-center text-xs text-base/80">
+            <div className="mt-3 text-center text-xs text-sand/80">
               {title} • {activeModalIndex + 1} of {gallery.length}
             </div>
           </div>

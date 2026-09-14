@@ -38,7 +38,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - [x] Implemented `app/about/page.tsx` (studio story, vision/mission, milestones, team profiles).
 - [x] Implemented `app/contact/page.tsx` (contact info card, interactive consultation form with validation & success state, embedded location map).
 - [x] Authored comprehensive documentation in `README.md`.
+- [x] Resolved Tailwind CSS v4 `text-base` font size collision by renaming the theme color token to `--color-sand: var(--color-base);` in `@theme inline` and replacing `bg-base` with `bg-sand` across all components. All text descriptions (`text-ink-muted text-sm sm:text-base`) are now clearly visible with crisp contrast and correct 16px typography.
 
 ## 4. Current Status
-- All 6 pages, 8 services, 9 projects, interactive consultation form, image galleries, and design token requirements from `task-requirement.md` and `design.md` are fully implemented.
+- All 6 pages, 8 services, 9 projects, interactive consultation form, image galleries, and design token requirements from `task-requirement.md` and `design.md` are fully implemented and verified.
 

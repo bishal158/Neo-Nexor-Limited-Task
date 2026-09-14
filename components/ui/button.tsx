@@ -33,11 +33,11 @@ export default function Button({
     secondary:
       "bg-surface text-ink border border-line hover:border-accent hover:text-accent",
     outline:
-      "bg-transparent text-ink border border-line hover:border-ink active:bg-base/60",
+      "bg-transparent text-ink border border-line hover:border-ink active:bg-sand/60",
     highlight:
       "bg-highlight text-surface hover:bg-accent active:bg-accent-deep",
     ghost:
-      "bg-transparent text-ink-muted hover:text-ink hover:bg-base/50",
+      "bg-transparent text-ink-muted hover:text-ink hover:bg-sand/50",
   };
 
   const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

@@ -25,7 +25,7 @@ export default function LocationMap() {
           href={directionsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-xs font-medium px-4 py-2 bg-base border border-line rounded-[4px] text-ink hover:text-accent hover:border-accent transition-colors self-start sm:self-auto shrink-0"
+          className="inline-flex items-center gap-2 text-xs font-medium px-4 py-2 bg-sand border border-line rounded-[4px] text-ink hover:text-accent hover:border-accent transition-colors self-start sm:self-auto shrink-0"
         >
           <Navigation className="w-3.5 h-3.5 text-accent" />
           <span>Get Directions</span>
@@ -34,7 +34,7 @@ export default function LocationMap() {
       </div>
 
       {/* Map Embed Container */}
-      <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full bg-base overflow-hidden">
+      <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full bg-sand overflow-hidden">
         <iframe
           title="Neo Interior Studio Office Location in Mohakhali DOHS"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.104257123999!2d90.39201487593678!3d23.779294978650383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c76ecf5b9d33%3A0xe54ef5a242f2aa2c!2sMohakhali%20DOHS%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1710000000000!5m2!1sen!2sbd"

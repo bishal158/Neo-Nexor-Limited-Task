@@ -48,7 +48,7 @@ export default function RelatedProjects({
             href={`/projects/${item.id}`}
             className="group block bg-surface rounded-[4px] border border-line overflow-hidden hover:border-accent transition-colors"
           >
-            <div className="relative aspect-[16/10] overflow-hidden bg-base">
+            <div className="relative aspect-[16/10] overflow-hidden bg-sand">
               <Image
                 src={item.image}
                 alt={item.title}

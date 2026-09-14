@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       className="group block bg-surface rounded-[4px] border border-line overflow-hidden transition-all duration-300 hover:border-accent"
     >
       {/* Visual Header */}
-      <div className="relative aspect-[16/11] overflow-hidden bg-base">
+      <div className="relative aspect-[16/11] overflow-hidden bg-sand">
         <Image
           src={project.image}
           alt={project.title}

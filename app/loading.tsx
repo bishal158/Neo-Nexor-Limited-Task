@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Loading() {
     return (
-        <div className="py-12 md:py-20 bg-base min-h-screen animate-pulse">
+        <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Hero Section Skeleton */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">

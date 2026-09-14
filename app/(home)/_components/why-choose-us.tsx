@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
               description="In an era of fleeting fast-furniture trends, we create enduring physical environments that elevate wellbeing and retain architectural value."
               className="mb-0"
             />
-            <div className="p-6 bg-base rounded-[4px] border border-line space-y-3">
+            <div className="p-6 bg-sand rounded-[4px] border border-line space-y-3">
               <span className="text-xs font-semibold text-accent uppercase tracking-wider">
                 Our Guarantee
               </span>
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
             {PILLARS.map((pillar) => (
               <div
                 key={pillar.title}
-                className="bg-base p-6 rounded-[4px] border border-line flex flex-col justify-between hover:border-accent transition-colors"
+                className="bg-sand p-6 rounded-[4px] border border-line flex flex-col justify-between hover:border-accent transition-colors"
               >
                 <div>
                   <div className="w-10 h-10 rounded-[4px] bg-surface border border-line flex items-center justify-center mb-4">

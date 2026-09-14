@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactLoading() {
     return (
-        <div className="py-12 md:py-20 bg-base min-h-screen animate-pulse">
+        <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Skeleton */}
                 <div className="max-w-3xl mb-12 space-y-3">
@@ -25,7 +25,7 @@ export default function ContactLoading() {
                             <div className="space-y-4 pt-4 border-t border-line/60">
                                 {[1, 2, 3, 4].map((i) => (
                                     <div key={i} className="flex items-start gap-3">
-                                        <div className="w-8 h-8 rounded-[4px] bg-base border border-line shrink-0" />
+                                        <div className="w-8 h-8 rounded-[4px] bg-sand border border-line shrink-0" />
                                         <div className="space-y-1.5 flex-1">
                                             <div className="h-3.5 w-24 bg-line/60 rounded-[2px]" />
                                             <div className="h-3 w-full bg-line/40 rounded-[2px]" />
@@ -48,33 +48,33 @@ export default function ContactLoading() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div className="space-y-2">
                                     <div className="h-3 w-20 bg-line/60 rounded-[2px]" />
-                                    <div className="h-10 w-full bg-base border border-line rounded-[4px]" />
+                                    <div className="h-10 w-full bg-sand border border-line rounded-[4px]" />
                                 </div>
                                 <div className="space-y-2">
                                     <div className="h-3 w-24 bg-line/60 rounded-[2px]" />
-                                    <div className="h-10 w-full bg-base border border-line rounded-[4px]" />
+                                    <div className="h-10 w-full bg-sand border border-line rounded-[4px]" />
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 <div className="space-y-2">
                                     <div className="h-3 w-24 bg-line/60 rounded-[2px]" />
-                                    <div className="h-10 w-full bg-base border border-line rounded-[4px]" />
+                                    <div className="h-10 w-full bg-sand border border-line rounded-[4px]" />
                                 </div>
                                 <div className="space-y-2">
                                     <div className="h-3 w-32 bg-line/60 rounded-[2px]" />
-                                    <div className="h-10 w-full bg-base border border-line rounded-[4px]" />
+                                    <div className="h-10 w-full bg-sand border border-line rounded-[4px]" />
                                 </div>
                             </div>
 
                             <div className="space-y-2">
                                 <div className="h-3 w-28 bg-line/60 rounded-[2px]" />
-                                <div className="h-10 w-full bg-base border border-line rounded-[4px]" />
+                                <div className="h-10 w-full bg-sand border border-line rounded-[4px]" />
                             </div>
 
                             <div className="space-y-2">
                                 <div className="h-3 w-36 bg-line/60 rounded-[2px]" />
-                                <div className="h-28 w-full bg-base border border-line rounded-[4px]" />
+                                <div className="h-28 w-full bg-sand border border-line rounded-[4px]" />
                             </div>
 
                             <div className="h-11 w-52 bg-line/60 rounded-[4px] pt-2" />
@@ -89,7 +89,7 @@ export default function ContactLoading() {
                             <div className="h-3 w-28 bg-line/60 rounded-[2px]" />
                             <div className="h-6 w-48 bg-line/60 rounded-[4px]" />
                         </div>
-                        <div className="h-8 w-32 bg-base border border-line rounded-[4px]" />
+                        <div className="h-8 w-32 bg-sand border border-line rounded-[4px]" />
                     </div>
                     <div className="aspect-[16/9] sm:aspect-[21/9] bg-line/30" />
                 </div>

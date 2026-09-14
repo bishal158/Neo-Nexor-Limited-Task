@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutLoading() {
     return (
-        <div className="py-12 md:py-20 bg-base min-h-screen animate-pulse">
+        <div className="py-12 md:py-20 bg-sand min-h-screen animate-pulse">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Skeleton */}
                 <div className="max-w-3xl mb-12 space-y-3">
@@ -31,7 +31,7 @@ export default function AboutLoading() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12">
                     {[1, 2].map((i) => (
                         <div key={i} className="p-8 bg-surface rounded-[4px] border border-line space-y-4">
-                            <div className="w-10 h-10 rounded-[4px] bg-base border border-line" />
+                            <div className="w-10 h-10 rounded-[4px] bg-sand border border-line" />
                             <div className="h-6 w-36 bg-line/60 rounded-[4px]" />
                             <div className="space-y-2">
                                 <div className="h-4 w-full bg-line/40 rounded-[3px]" />

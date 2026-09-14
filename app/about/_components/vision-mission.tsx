@@ -7,7 +7,7 @@ export default function VisionMission() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
           {/* Vision */}
-          <div className="p-8 bg-base rounded-[4px] border border-line space-y-4">
+          <div className="p-8 bg-sand rounded-[4px] border border-line space-y-4">
             <div className="w-10 h-10 rounded-[4px] bg-surface border border-line flex items-center justify-center">
               <Eye className="w-5 h-5 text-accent" />
             </div>
@@ -18,7 +18,7 @@ export default function VisionMission() {
           </div>
 
           {/* Mission */}
-          <div className="p-8 bg-base rounded-[4px] border border-line space-y-4">
+          <div className="p-8 bg-sand rounded-[4px] border border-line space-y-4">
             <div className="w-10 h-10 rounded-[4px] bg-surface border border-line flex items-center justify-center">
               <Compass className="w-5 h-5 text-accent" />
             </div>
@@ -31,7 +31,7 @@ export default function VisionMission() {
 
         {/* Guiding Principles */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-          <div className="space-y-2 p-5 bg-base/50 rounded-[4px] border border-line/60">
+          <div className="space-y-2 p-5 bg-sand/50 rounded-[4px] border border-line/60">
             <span className="text-xs uppercase font-semibold text-accent tracking-wider">
               01. Spatial Proportion
             </span>
@@ -39,7 +39,7 @@ export default function VisionMission() {
               Before aesthetics, we resolve scale, circulation, and light distribution.
             </p>
           </div>
-          <div className="space-y-2 p-5 bg-base/50 rounded-[4px] border border-line/60">
+          <div className="space-y-2 p-5 bg-sand/50 rounded-[4px] border border-line/60">
             <span className="text-xs uppercase font-semibold text-accent tracking-wider">
               02. Material Honesty
             </span>
@@ -47,7 +47,7 @@ export default function VisionMission() {
               We never fake materials; wood is real timber, stone is quarried rock.
             </p>
           </div>
-          <div className="space-y-2 p-5 bg-base/50 rounded-[4px] border border-line/60">
+          <div className="space-y-2 p-5 bg-sand/50 rounded-[4px] border border-line/60">
             <span className="text-xs uppercase font-semibold text-accent tracking-wider">
               03. Acoustic Wellness
             </span>
@@ -55,7 +55,7 @@ export default function VisionMission() {
               We engineer sound damping into walls and ceilings for true tranquility.
             </p>
           </div>
-          <div className="space-y-2 p-5 bg-base/50 rounded-[4px] border border-line/60">
+          <div className="space-y-2 p-5 bg-sand/50 rounded-[4px] border border-line/60">
             <span className="text-xs uppercase font-semibold text-accent tracking-wider">
               04. Turnkey Certainty
             </span>
