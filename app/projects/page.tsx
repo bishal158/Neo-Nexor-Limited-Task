@@ -47,17 +47,17 @@ function ProjectsContent() {
   }, [activeCategory]);
 
   return (
-    <div className="py-12 md:py-20 bg-sand min-h-screen">
+    <div className="py-3 sm:py-6 md:py-12 bg-sand min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
-        <div className="max-w-3xl mb-10">
-          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
+        <div className="max-w-3xl mb-3 sm:mb-5 md:mb-8">
+          <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-1 sm:mb-2">
             Selected Works &amp; Spatial Case Studies
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl text-ink font-normal leading-tight">
+          <h1 className="font-display text-2xl sm:text-5xl text-ink font-normal leading-tight">
             Portfolio of Architecture &amp; Interiors
           </h1>
-          <p className="mt-4 text-ink-muted text-base sm:text-lg leading-relaxed max-w-[65ch]">
+          <p className="mt-2.5 text-ink-muted text-sm sm:text-base leading-relaxed max-w-[65ch]">
             Browse our documented interior architecture projects across residential, workplace, and commercial domains. Filter by typology or explore detailed case studies.
           </p>
         </div>
@@ -71,14 +71,14 @@ function ProjectsContent() {
         />
 
         {/* Results Counter */}
-        <div className="py-6 flex items-center justify-between text-xs text-ink-muted">
+        <div className="py-2.5 sm:py-3.5 flex items-center justify-between text-xs text-ink-muted">
           <span>
             Showing <strong className="text-ink">{filteredProjects.length}</strong> {filteredProjects.length === 1 ? "project" : "projects"} in <strong className="text-accent">{activeCategory}</strong>
           </span>
           {activeCategory !== "All" && (
             <button
               onClick={() => setActiveCategory("All")}
-              className="text-accent hover:underline cursor-pointer font-medium"
+              className="text-accent hover:underline cursor-pointer font-medium text-xs"
             >
               Reset filter
             </button>
@@ -87,18 +87,18 @@ function ProjectsContent() {
 
         {/* Projects Grid */}
         {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6 lg:gap-8">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 bg-surface rounded-[4px] border border-line p-8">
-            <p className="font-display text-xl text-ink">No projects found in this category.</p>
-            <p className="text-xs text-ink-muted mt-2">Try selecting another filter or viewing all projects.</p>
+          <div className="text-center py-6 sm:py-12 bg-surface rounded-[4px] border border-line p-4 sm:p-8">
+            <p className="font-display text-lg sm:text-xl text-ink">No projects found in this category.</p>
+            <p className="text-[11px] sm:text-xs text-ink-muted mt-1.5">Try selecting another filter or viewing all projects.</p>
             <button
               onClick={() => setActiveCategory("All")}
-              className="mt-4 inline-block text-xs text-accent font-medium hover:underline"
+              className="mt-3 inline-block text-xs text-accent font-medium hover:underline"
             >
               Show all projects
             </button>

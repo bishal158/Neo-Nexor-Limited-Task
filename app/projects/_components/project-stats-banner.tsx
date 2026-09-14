@@ -9,14 +9,14 @@ export default function ProjectStatsBanner() {
   ];
 
   return (
-    <div className="bg-surface rounded-[4px] border border-line p-6 sm:p-8 mt-16 mb-6">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <div className="bg-surface rounded-[4px] border border-line py-2.5 sm:py-5 px-3 sm:px-6 md:p-8 mt-4 sm:mt-8 md:mt-12 mb-1 sm:mb-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 text-center">
         {stats.map((stat) => (
-          <div key={stat.label} className="space-y-1">
-            <span className="font-display text-2xl sm:text-3xl text-ink font-light">
+          <div key={stat.label} className="space-y-0.5 sm:space-y-1">
+            <span className="font-display text-lg sm:text-3xl text-ink font-normal">
               {stat.value}
             </span>
-            <p className="text-xs text-ink-muted">{stat.label}</p>
+            <p className="text-[10px] sm:text-xs text-ink-muted leading-tight">{stat.label}</p>
           </div>
         ))}
       </div>

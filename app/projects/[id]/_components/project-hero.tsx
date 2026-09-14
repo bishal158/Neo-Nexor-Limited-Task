@@ -27,17 +27,17 @@ export default function ProjectHero({ project }: ProjectHeroProps) {
         <span className="text-xs text-ink-muted">Case Study #{project.id.slice(0, 8)}</span>
       </div>
 
-      <div className="space-y-3">
-        <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-ink font-normal leading-tight">
+      <div className="space-y-1.5 sm:space-y-3">
+        <h1 className="font-display text-xl sm:text-3xl lg:text-5xl text-ink font-normal leading-tight">
           {project.title}
         </h1>
-        <p className="text-base sm:text-lg text-ink-muted leading-relaxed max-w-[70ch]">
+        <p className="text-[11px] sm:text-sm md:text-base text-ink-muted leading-relaxed max-w-[70ch]">
           {project.subtitle}
         </p>
       </div>
 
       {/* Project Meta Bar */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 bg-surface rounded-[4px] border border-line">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 p-3.5 sm:p-5 bg-surface rounded-[4px] border border-line">
         <div className="space-y-1">
           <span className="text-[11px] text-ink-muted uppercase tracking-wider flex items-center gap-1">
             <UserCheck className="w-3 h-3 text-accent" />

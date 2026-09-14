@@ -17,7 +17,7 @@ export default function ProjectFilter({
   counts,
 }: ProjectFilterProps) {
   return (
-    <div className="flex flex-wrap items-center gap-2 py-4 border-b border-line">
+    <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 py-2 sm:py-3 border-b border-line">
       {categories.map((cat) => {
         const isActive = activeCategory === cat;
         const count = counts[cat] || 0;
@@ -27,7 +27,7 @@ export default function ProjectFilter({
             key={cat}
             type="button"
             onClick={() => onSelectCategory(cat)}
-            className={`px-3.5 py-1.5 text-xs font-medium rounded-[4px] transition-all duration-200 cursor-pointer flex items-center gap-1.5 border ${
+            className={`px-3 py-1 text-xs font-medium rounded-[4px] transition-all duration-200 cursor-pointer flex items-center gap-1.5 border ${
               isActive
                 ? "bg-accent text-surface border-accent font-semibold"
                 : "bg-surface text-ink-muted border-line hover:border-accent hover:text-ink"
