@@ -1,9 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { CheckCircle2, Send, Loader2 } from "lucide-react";
 import Button from "@/components/ui/button";
+import CommonFieldset from "@/components/ui/common-fieldset";
+
+/* -------------------------------------------------------------------------- */
+/*  Constants                                                                   */
+/* -------------------------------------------------------------------------- */
 
 const PROJECT_TYPES = [
   "Residential Interior",
@@ -14,74 +20,77 @@ const PROJECT_TYPES = [
   "Full Turnkey Renovation",
   "Space Planning Consultation",
   "Other Spatial Commission",
-];
+] as const;
+
+/* -------------------------------------------------------------------------- */
+/*  Types                                                                       */
+/* -------------------------------------------------------------------------- */
+
+interface ConsultationFormData {
+  name: string;
+  phone: string;
+  email: string;
+  approxArea: string;
+  projectType: string;
+  message: string;
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Component                                                                   */
+/* -------------------------------------------------------------------------- */
 
 export default function ConsultationForm() {
   const searchParams = useSearchParams();
   const prefilledProject = searchParams.get("project");
   const prefilledService = searchParams.get("service");
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    projectType: PROJECT_TYPES[0],
-    approxArea: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    setValue,
+    watch,
+    formState: { errors, isSubmitting, isSubmitSuccessful },
+  } = useForm<ConsultationFormData>({
+    defaultValues: {
+      name: "",
+      phone: "",
+      email: "",
+      approxArea: "",
+      projectType: PROJECT_TYPES[0],
+      message: "",
+    },
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  // Prefill message from URL query params
   useEffect(() => {
     if (prefilledProject) {
-      setFormData((prev) => ({
-        ...prev,
-        message: `I am interested in commissioning a project similar to: ${prefilledProject}.`,
-      }));
+      setValue(
+        "message",
+        `I am interested in commissioning a project similar to: ${prefilledProject}.`
+      );
     } else if (prefilledService) {
-      setFormData((prev) => ({
-        ...prev,
-        message: `I would like to schedule a consultation regarding: ${prefilledService}.`,
-      }));
+      setValue(
+        "message",
+        `I would like to schedule a consultation regarding: ${prefilledService}.`
+      );
     }
-  }, [prefilledProject, prefilledService]);
+  }, [prefilledProject, prefilledService, setValue]);
 
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const submittedName = watch("name");
+  const submittedContact = watch("phone") || watch("email");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
+  const onSubmit: SubmitHandler<ConsultationFormData> = async (_data) => {
     // Simulate professional async submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 900);
+    await new Promise((resolve) => setTimeout(resolve, 900));
   };
 
   const handleReset = () => {
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      projectType: PROJECT_TYPES[0],
-      approxArea: "",
-      message: "",
-    });
-    setIsSubmitted(false);
+    reset();
   };
 
-  if (isSubmitted) {
+  /* ---- Success state ---------------------------------------------------- */
+  if (isSubmitSuccessful) {
     return (
       <div className="bg-surface rounded-[4px] border border-line p-8 sm:p-12 text-center space-y-5 animate-in fade-in duration-300">
         <div className="w-14 h-14 rounded-full bg-accent/10 border border-accent/30 text-accent flex items-center justify-center mx-auto">
@@ -93,7 +102,12 @@ export default function ConsultationForm() {
             Consultation Request Received
           </h3>
           <p className="text-sm text-ink-muted leading-relaxed">
-            Thank you, <strong className="text-ink">{formData.name}</strong>. Our principal architectural team at Mohakhali DOHS has received your inquiry and will reach out via <strong className="text-ink">{formData.phone || formData.email}</strong> within 24 business hours.
+            Thank you,{" "}
+            <strong className="text-ink">{submittedName}</strong>. Our principal
+            architectural team at Mohakhali DOHS has received your inquiry and
+            will reach out via{" "}
+            <strong className="text-ink">{submittedContact}</strong> within 24
+            business hours.
           </p>
         </div>
 
@@ -109,6 +123,7 @@ export default function ConsultationForm() {
     );
   }
 
+  /* ---- Form ------------------------------------------------------------- */
   return (
     <div className="bg-surface rounded-[4px] border border-line p-6 sm:p-8 lg:p-10">
       <div className="mb-6 space-y-1">
@@ -116,118 +131,145 @@ export default function ConsultationForm() {
           Request a Design Consultation
         </h3>
         <p className="text-xs sm:text-sm text-ink-muted">
-          Fill in the details below to schedule an on-site or studio diagnostic consultation.
+          Fill in the details below to schedule an on-site or studio diagnostic
+          consultation.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-5">
+        {/* Row 1 — Name + Phone */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {/* Name */}
-          <div className="space-y-1.5">
-            <label htmlFor="name" className="block text-xs font-medium text-ink">
-              Full Name <span className="text-accent">*</span>
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="e.g. Tariqul Islam"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
-            />
-          </div>
+          <CommonFieldset
+            label="Full Name"
+            required
+            error={errors.name?.message}
+          >
+            {({ id, inputClassName }) => (
+              <input
+                id={id}
+                type="text"
+                placeholder="e.g. Tariqul Islam"
+                className={inputClassName}
+                {...register("name", {
+                  required: "Full name is required",
+                  minLength: {
+                    value: 2,
+                    message: "Name must be at least 2 characters",
+                  },
+                })}
+              />
+            )}
+          </CommonFieldset>
 
-          {/* Phone */}
-          <div className="space-y-1.5">
-            <label htmlFor="phone" className="block text-xs font-medium text-ink">
-              Phone Number <span className="text-accent">*</span>
-            </label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              placeholder="e.g. +880 1711 XXXXXX"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
-            />
-          </div>
+          <CommonFieldset
+            label="Phone Number"
+            required
+            error={errors.phone?.message}
+          >
+            {({ id, inputClassName }) => (
+              <input
+                id={id}
+                type="tel"
+                placeholder="e.g. +880 1711 XXXXXX"
+                className={inputClassName}
+                {...register("phone", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^[+]?[\d\s\-().]{7,20}$/,
+                    message: "Enter a valid phone number",
+                  },
+                })}
+              />
+            )}
+          </CommonFieldset>
         </div>
 
+        {/* Row 2 — Email + Area */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {/* Email */}
-          <div className="space-y-1.5">
-            <label htmlFor="email" className="block text-xs font-medium text-ink">
-              Email Address <span className="text-accent">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="e.g. client@domain.com"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
-            />
-          </div>
+          <CommonFieldset
+            label="Email Address"
+            required
+            error={errors.email?.message}
+          >
+            {({ id, inputClassName }) => (
+              <input
+                id={id}
+                type="email"
+                placeholder="e.g. client@domain.com"
+                className={inputClassName}
+                {...register("email", {
+                  required: "Email address is required",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "Enter a valid email address",
+                  },
+                })}
+              />
+            )}
+          </CommonFieldset>
 
-          {/* Approx Area / Location */}
-          <div className="space-y-1.5">
-            <label htmlFor="approxArea" className="block text-xs font-medium text-ink">
-              Approximate Area / Location
-            </label>
-            <input
-              type="text"
-              id="approxArea"
-              name="approxArea"
-              placeholder="e.g. 4,200 sq ft, Gulshan 2"
-              value={formData.approxArea}
-              onChange={handleChange}
-              className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors"
-            />
-          </div>
+          <CommonFieldset
+            label="Approximate Area / Location"
+            hint="Optional — helps us prepare"
+            error={errors.approxArea?.message}
+          >
+            {({ id, inputClassName }) => (
+              <input
+                id={id}
+                type="text"
+                placeholder="e.g. 4,200 sq ft, Gulshan 2"
+                className={inputClassName}
+                {...register("approxArea")}
+              />
+            )}
+          </CommonFieldset>
         </div>
 
         {/* Project Type */}
-        <div className="space-y-1.5">
-          <label htmlFor="projectType" className="block text-xs font-medium text-ink">
-            Project Typology <span className="text-accent">*</span>
-          </label>
-          <select
-            id="projectType"
-            name="projectType"
-            value={formData.projectType}
-            onChange={handleChange}
-            className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink transition-colors cursor-pointer"
-          >
-            {PROJECT_TYPES.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
-        </div>
+        <CommonFieldset
+          label="Project Typology"
+          required
+          error={errors.projectType?.message}
+        >
+          {({ id, inputClassName }) => (
+            <select
+              id={id}
+              className={`${inputClassName} cursor-pointer`}
+              {...register("projectType", {
+                required: "Please select a project type",
+              })}
+            >
+              {PROJECT_TYPES.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+          )}
+        </CommonFieldset>
 
         {/* Message */}
-        <div className="space-y-1.5">
-          <label htmlFor="message" className="block text-xs font-medium text-ink">
-            Project Scope &amp; Special Requirements <span className="text-accent">*</span>
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            rows={4}
-            placeholder="Tell us about the property, your anticipated timeline, preferred materials, and spatial aspirations..."
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full text-xs sm:text-sm px-3.5 py-2.5 bg-sand border border-line rounded-[4px] focus:outline-hidden focus:border-accent text-ink placeholder:text-ink-muted/60 transition-colors resize-y"
-          />
-        </div>
+        <CommonFieldset
+          label="Project Scope & Special Requirements"
+          required
+          error={errors.message?.message}
+        >
+          {({ id, inputClassName }) => (
+            <textarea
+              id={id}
+              rows={4}
+              placeholder="Tell us about the property, your anticipated timeline, preferred materials, and spatial aspirations..."
+              className={`${inputClassName} resize-y`}
+              {...register("message", {
+                required: "Please describe your project scope",
+                minLength: {
+                  value: 20,
+                  message: "Please provide at least 20 characters",
+                },
+              })}
+            />
+          )}
+        </CommonFieldset>
 
         {/* Submit */}
         <div className="pt-2">
