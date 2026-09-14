@@ -1,6 +1,5 @@
 import React from "react";
 import { ShieldCheck, Sparkles, Clock, Trees } from "lucide-react";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 
 const PILLARS = [
@@ -33,7 +32,7 @@ const PILLARS = [
 export default function WhyChooseUs() {
   return (
     <section className="py-20 md:py-28 bg-surface border-y border-line">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-5 space-y-5">
             <SectionHeading
@@ -73,7 +72,7 @@ export default function WhyChooseUs() {
             ))}
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

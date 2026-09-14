@@ -11,7 +11,6 @@ import {
   Hammer,
   ArrowRight,
 } from "lucide-react";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 import Button from "@/components/ui/button";
 import { services } from "@/data/services";
@@ -33,7 +32,7 @@ export default function ServicesOverview() {
 
   return (
     <section className="py-20 md:py-28 bg-surface border-y border-line">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <SectionHeading
             eyebrow="Disciplines &amp; Expertise"
@@ -89,7 +88,7 @@ export default function ServicesOverview() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

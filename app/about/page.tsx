@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import Container from "@/components/ui/container";
 import StudioStory from "./_components/studio-story";
 import VisionMission from "./_components/vision-mission";
 import Achievements from "./_components/achievements";
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="py-12 md:py-20 bg-base min-h-screen">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
@@ -29,7 +28,7 @@ export default function AboutPage() {
             An architectural practice founded on the belief that spaces should be restful, tactile, and built to outlive fleeting aesthetic trends.
           </p>
         </div>
-      </Container>
+      </div>
 
       {/* Origin & Philosophy */}
       <StudioStory />

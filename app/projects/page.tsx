@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 import ProjectFilter from "./_components/project-filter";
 import ProjectCard from "./_components/project-card";
@@ -49,7 +48,7 @@ function ProjectsContent() {
 
   return (
     <div className="py-12 md:py-20 bg-base min-h-screen">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="max-w-3xl mb-10">
           <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
@@ -108,7 +107,7 @@ function ProjectsContent() {
 
         {/* Portfolio Stats Banner */}
         <ProjectStatsBanner />
-      </Container>
+      </div>
     </div>
   );
 }

@@ -1,12 +1,11 @@
 import React from "react";
 import { ArrowRight, Phone } from "lucide-react";
-import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
 
 export default function ConsultationCTA() {
   return (
     <section className="bg-accent-deep text-base py-20 md:py-24 relative overflow-hidden">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <span className="inline-block text-xs uppercase tracking-widest text-highlight font-semibold">
             Begin Your Project
@@ -42,7 +41,7 @@ export default function ConsultationCTA() {
             Studio Location: House 252 (3rd Floor), Road 18 (Lake Road), Mohakhali DOHS, Dhaka
           </p>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

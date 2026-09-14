@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 import { teamMembers } from "@/data/team";
 
 export default function TeamSection() {
   return (
     <section className="py-20 md:py-28 bg-surface border-y border-line">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Studio Leadership"
           title="The architects and makers behind Neo."
@@ -47,7 +46,7 @@ export default function TeamSection() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

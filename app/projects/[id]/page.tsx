@@ -1,7 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Container from "@/components/ui/container";
 import ProjectHero from "./_components/project-hero";
 import ProjectGallery from "./_components/project-gallery";
 import ProjectSpecs from "./_components/project-specs";
@@ -49,7 +48,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
   return (
     <div className="py-12 md:py-20 bg-base min-h-screen">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* Project Hero Header & Metadata */}
           <ProjectHero project={project} />
@@ -66,7 +65,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             category={project.category}
           />
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

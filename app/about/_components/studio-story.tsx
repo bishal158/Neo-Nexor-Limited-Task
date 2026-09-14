@@ -1,11 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Container from "@/components/ui/container";
 
 export default function StudioStory() {
   return (
     <section className="py-12 md:py-16">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6 space-y-6">
             <span className="text-xs uppercase tracking-widest text-accent font-semibold block">
@@ -39,7 +38,7 @@ export default function StudioStory() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

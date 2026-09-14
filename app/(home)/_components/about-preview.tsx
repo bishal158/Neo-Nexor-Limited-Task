@@ -2,12 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import Container from "@/components/ui/container";
 
 export default function AboutPreview() {
   return (
     <section className="py-20 md:py-28 bg-surface border-y border-line">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Architectural Image Pairing */}
           <div className="lg:col-span-5 order-2 lg:order-1 relative">
@@ -61,7 +60,7 @@ export default function AboutPreview() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

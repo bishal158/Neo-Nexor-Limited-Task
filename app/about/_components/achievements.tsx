@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 import { Award, Building, Users2, ShieldCheck } from "lucide-react";
 
@@ -33,7 +32,7 @@ export default function Achievements() {
 
   return (
     <section className="py-20 bg-base">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Milestones &amp; Impact"
           title="A track record of architectural consistency."
@@ -62,7 +61,7 @@ export default function Achievements() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

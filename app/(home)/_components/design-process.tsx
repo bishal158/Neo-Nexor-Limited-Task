@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 
 const PROCESS_STEPS = [
@@ -40,7 +39,7 @@ const PROCESS_STEPS = [
 export default function DesignProcess() {
   return (
     <section className="py-20 md:py-28 bg-base">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Our Methodology"
           title="A rigorous, transparent journey from sketch to key handover."
@@ -76,7 +75,7 @@ export default function DesignProcess() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

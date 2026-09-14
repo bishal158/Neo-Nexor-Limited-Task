@@ -31,7 +31,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - [x] Configured Unsplash remote patterns in `next.config.ts`.
 - [x] Populated `data/projects.ts` (9 rich curated projects), `data/services.ts` (8 core services), `data/testimonials.ts` (5 client reviews), and `data/team.ts` (4 leadership profiles).
 - [x] Built global layout: `components/layout/header.tsx` (glassmorphic sticky nav, active link indicator, mobile drawer) and `components/layout/footer.tsx` (official Mohakhali DOHS details, newsletter, legal links).
-- [x] Built core UI: `components/ui/button.tsx`, `components/ui/container.tsx`, and `components/ui/section-heading.tsx`.
+- [x] Built core UI: `components/ui/button.tsx` and `components/ui/section-heading.tsx` (using Tailwind native `container` utility).
 - [x] Implemented `app/(home)/page.tsx` and all 8 colocated section components.
 - [x] Implemented `app/projects/page.tsx` (category filtering + project cards + milestone stats) and `app/projects/[id]/page.tsx` (specs, narrative, mosaic gallery with fullscreen modal, related projects).
 - [x] Implemented `app/services/page.tsx` (8 comprehensive service cards, engagement process, interactive FAQ).

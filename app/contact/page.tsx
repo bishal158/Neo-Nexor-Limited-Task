@@ -1,6 +1,5 @@
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
-import Container from "@/components/ui/container";
 import ContactInfoCard from "./_components/contact-info-card";
 import ConsultationForm from "./_components/consultation-form";
 import LocationMap from "./_components/location-map";
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="py-12 md:py-20 bg-base min-h-screen">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-12">
           <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
@@ -43,7 +42,7 @@ export default function ContactPage() {
 
         {/* Map Section */}
         <LocationMap />
-      </Container>
+      </div>
     </div>
   );
 }

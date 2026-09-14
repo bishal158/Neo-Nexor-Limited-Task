@@ -1,11 +1,10 @@
 import React from "react";
-import Container from "@/components/ui/container";
-import { Compass, Eye, HeartHandshake, Shield } from "lucide-react";
+import { Compass, Eye } from "lucide-react";
 
 export default function VisionMission() {
   return (
     <section className="py-16 bg-surface border-y border-line">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-14">
           {/* Vision */}
           <div className="p-8 bg-base rounded-[4px] border border-line space-y-4">
@@ -65,7 +64,7 @@ export default function VisionMission() {
             </p>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

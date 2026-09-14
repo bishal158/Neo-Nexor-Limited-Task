@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import Container from "@/components/ui/container";
 import ServiceCard from "./_components/service-card";
 import ServiceProcess from "./_components/service-process";
 import ServiceFAQ from "./_components/service-faq";
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <div className="py-12 md:py-20 bg-base min-h-screen">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Hero Header */}
         <div className="max-w-3xl mb-14">
           <span className="text-xs uppercase tracking-widest text-accent font-semibold block mb-2">
@@ -42,7 +41,7 @@ export default function ServicesPage() {
 
         {/* FAQ Accordion */}
         <ServiceFAQ />
-      </Container>
+      </div>
 
       {/* Consultation Banner */}
       <div className="mt-16">

@@ -1,13 +1,12 @@
 import React from "react";
 import { Star } from "lucide-react";
-import Container from "@/components/ui/container";
 import SectionHeading from "@/components/ui/section-heading";
 import { testimonials } from "@/data/testimonials";
 
 export default function Testimonials() {
   return (
     <section className="py-20 md:py-28 bg-base">
-      <Container>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Client Perspectives"
           title="Endorsements from owners, developers, and founders."
@@ -46,7 +45,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
